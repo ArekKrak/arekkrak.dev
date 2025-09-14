@@ -508,9 +508,8 @@ footer .equalizer {
         margin: 0;
     }
 
-    .main-image:not(.flipped):hover .front { 
-        opacity: 0; 
-        transition-duration: 5500ms;    /* slower fade for hover */
+    .main-image img {
+        cursor: default;
     }
 
     .linkedin svg:hover {
