@@ -17,41 +17,61 @@ function toggleQuick() {
     - Adds/removes the "flipped" class on click */
 portrait.addEventListener('click', toggleQuick);
 
-/* === Rotating background that tracks dark/light === */
+/* ================================================== */
+/* === ROTATING BACKGROUND THAT TRACKS DARK/LIGHT === */
+
+/* IIFE (Immediately Invoked Function Expression):
+   - It's a function that defines itself and runs immediately.
+   - Keeps all variables (like `bg`, `anim`) private so they don't leak into the global scope
+     and collide with other code. */
 (function () {
-    // Creating the overlay behind content
+    // Creating one overlay element that sits behind the content and carries the SVG
     const bg = document.createElement('div');
+    
+    /* Applying all fixed positioning and rendering hints:
+       - fixed + centered: anchor to viewport center, not document flow
+       - zIndex: '-1'; is safe because body has 'isolation: isolate'
+       - pointerEvents: 'none' lets clicks go through to your content
+       - background* props define how the image fills the overlay
+       - willChange hints the browser that 'transform' will animate (optimizes paint) */
     Object.assign(bg.style, {
         position: 'fixed',
         left: '50%',
         top: '50%',
-        transform: 'translate(-50%, -50%)',
-        zIndex: '-1',
+        transform: 'translate(-50%, -50%)', // center the overlay
+        zIndex: '-1',                       // behind content (safe with isolation: isolate)
         pointerEvents: 'none',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         willChange: 'transform, width, height, background-image'
     });
+
+    // Insert the overlay as the first child of <body>
     document.body.prepend(bg);
 
-    // Preload both backgrounds to avoid flicker on theme change
+    // Preload both backgrounds so switching theme has no flicker
     ["img/background-dark.svg", "img/background-light.svg"].forEach(s => {
-        const i = new Image();
-        i.src = s;
+        const i = new Image(); // create an <img> in memory
+        i.src = s;             // setting src triggers the browser to fetch/cache it
     });
 
-    // Size it to the viewport diagonal so rotation corners never show
+    /* Size the overlay as a square large enough to cover the viewport diagonally, so when it
+       rotates, no corners "peek" out */
     function sizeOverlay() {
-        const diag = Math.hypot(window.innerWidth, window.innerHeight);
-        const pad = Math.ceil(diag * 1.1);
+        // window.innerWidth/innerHeight are the viewport size in CSS pixels
+        const diag = Math.hypot(window.innerWidth, window.innerHeight); // √(w² + h²)
+        const pad = Math.ceil(diag * 1.1);      // small cushion so edges never show
         bg.style.width = pad + 'px';
         bg.style.height = pad + 'px';
     }
-    sizeOverlay();
+    sizeOverlay(); // size once on load
+
+    // Recompute size whenever the viewport changes (e.g., resize, rotate device)
     window.addEventListener('resize', sizeOverlay, {passive: true});
 
-    // Decide which theme is active and set the right SVG
+    /* Helper: detect if current theme is light.
+       Supports either data-theme="light" or a "light" class on <html> or <body>. */
     function isLight() {
         const root = document.documentElement;
         const body = document.body;
@@ -64,25 +84,36 @@ portrait.addEventListener('click', toggleQuick);
         );
     }
 
+    // Apply the correct SVG for the current theme
     function bgForTheme() {
         bg.style.backgroundImage = isLight() ? "url('img/background-light.svg')" : "url('img/background-dark.svg')";
     }
-    bgForTheme();
+    bgForTheme(); // set once on load
 
-    // Animate (Web animations API)
+    /* Respect the user's OS setting for reduced motion (accessibility).
+       If they prefer reduced motion, don't animate at all. */
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    // Keeping a reference to the animation instance in case there's need to control it later.
     let anim = null;
+
+    // Only start the animation if the user hasn't asked for reduced motion
     if (!prefersReduced) {
+
+        /* Web Animations API:
+           - keyframes: from rotate(0deg) to rotate(360deg) around the centered translate
+           - options: duration, infinite loop, linear speed */
         anim = bg.animate(
             [
                 {transform: 'translate(-50%, -50%) rotate(0deg)'},
                 {transform: 'translate(-50%, -50%) rotate(360deg)'}
             ],
-            {duration: 30000, iterations: Infinity, easing: 'linear'}
+            {duration: 35000, iterations: Infinity, easing: 'linear'}
         );
     }
 
-    // Watch for theme changes (class/data-attr flips)
+    /* Watch for theme changes (class/data-attr flips). Your theme toggle likely changes <html> or <body>
+       attributes/classes. Whenever that happens, update the background image. */
     const obs = new MutationObserver(bgForTheme);
     obs.observe(document.documentElement, {attributes: true, attributeFilter: ['class', 'data-theme'] });
     obs.observe(document.body, {attributes: true, attributeFilter: ['class', 'data-theme'] });
