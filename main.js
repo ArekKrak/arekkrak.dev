@@ -118,3 +118,43 @@ portrait.addEventListener('click', toggleQuick);
     obs.observe(document.documentElement, {attributes: true, attributeFilter: ['class', 'data-theme'] });
     obs.observe(document.body, {attributes: true, attributeFilter: ['class', 'data-theme'] });
 })();
+
+(function () {
+    /* LocalStorage key name where user's chosen theme is saved (so when the page reloads, the site
+       remembers the user's choice) */
+    const KEY = 'theme';
+    const btn = document.getElementById('theme-toggle');
+
+    // If there's no button in the page, stop here (safety check)
+    if (!btn) return;
+
+    /* Try to read a previously saved theme from localStorage. This will be either "light" or "dark" if the user
+       clicked before, or null if this is their first visit. */
+    const saved = localStorage.getItem(KEY);
+
+    /* Decide the initial theme:
+       - if saved is valid ("light" or "dark"), use it
+       - otherwise default to the default "dark" */
+    const initial = (saved === 'light' || saved === 'dark') ? saved : 'dark';
+
+    /* Apply the initial theme by setting data-theme on <html>
+       Example: <html data-theme="dark"> ... </html> */
+    document.documentElement.setAttribute('data-theme', initial);
+
+    // Listens for clicks on the button
+    btn.addEventListener('click', () => {
+
+        // Get the current theme from <html>
+        const current = document.documentElement.getAttribute('data-theme');
+
+        // Decide the next theme: if dark - switch to light, if light - switch to dark
+        const next = current === 'dark' ? 'light' : 'dark';
+
+        // Apply the new theme
+        document.documentElement.setAttribute('data-theme', next);
+
+        // Save it to localStorage so it persists across reloads
+        localStorage.setItem(KEY, next);
+        btn.setAttribute('aria-pressed', next === 'dark' ? 'true' : 'false');
+    });
+})();
