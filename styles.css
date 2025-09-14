@@ -17,8 +17,8 @@ body {
     font-family: "Lato", monospace;
     font-size: 16px;
     background-color: #fff; /* fallback */
-    isolation: isolate;
-    overflow: hidden;
+    isolation: isolate;       /* lets a child at z-index: -1; sit behind content */
+    /* overflow: hidden; */         /* avoid scrollbars while rotating */
 }
 
 ::-webkit-scrollbar {
