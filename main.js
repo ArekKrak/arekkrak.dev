@@ -119,6 +119,9 @@ if (portrait) {
     obs.observe(document.body, {attributes: true, attributeFilter: ['class', 'data-theme'] });
 })();
 
+/* =================================================== */
+/* =============== TOGGLE BUTTON SETUP =============== */
+
 (function () {
     /* LocalStorage key name where user's chosen theme is saved (so when the page reloads, the site
        remembers the user's choice) */
