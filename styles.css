@@ -91,6 +91,13 @@ nav .nav {
     justify-content: space-between;
 }
 
+#theme-toggle {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
 .info {
     align-items: center;
     height: 100%;
