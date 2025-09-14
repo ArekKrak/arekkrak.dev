@@ -16,6 +16,9 @@ body {
     position: relative;
     font-family: "Lato", monospace;
     font-size: 16px;
+}
+
+.background {
     background-color: #fff; /* fallback */
     /* background image + overlay in one declaration */
     background-image:
