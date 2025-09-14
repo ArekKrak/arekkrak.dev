@@ -1,0 +1,547 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    min-height: 100%;
+}
+
+body {
+    position: relative;
+    font-family: "Lato", monospace;
+    font-size: 16px;
+    background-color: #fff; /* fallback */
+    /* background image + overlay in one declaration */
+    background-image:
+        /* linear-gradient(rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.40)), */
+        url("img/background-dark.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(44, 44, 44);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 255, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(98, 192, 98);
+}
+
+header {
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+nav {
+    left: 0;
+    bottom: 50%;
+    position: fixed;
+    width: 0;
+    margin-left: 5rem;
+    transform: translateY(50%);
+    z-index: 1;
+}
+
+nav .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a {
+    margin: 1rem 1.5rem;
+}
+
+.nav a svg {
+    padding: .5rem;
+    color: rgb(0, 0, 0);
+}
+
+.nav .active svg {
+    border-radius: .5rem;
+    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+    color: rgb(255, 255, 255);
+}
+
+.nav .inactive svg:hover {
+    border-radius: .5rem;
+    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+    color: rgb(255, 255, 255);
+}
+
+.info,
+.main-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    align-items: center;
+    height: 100%;
+}
+
+.main-info {
+    align-items: flex-start;
+    flex-direction: column;
+    width: 45%;
+    margin-left: 15%;
+    background-color: rgb(174, 254, 174);
+    padding: 20px;
+    border-radius: 2rem;
+}
+
+.main-info h1 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.main-info h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.main-info h1,
+.main-info h2 {
+    margin: 0;
+}
+
+.main-info span {
+    margin: 2.5rem 0;
+    font-size: 1.4rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.socials span {
+    margin: 0;
+}
+
+.linkedin a {
+    margin-right: 10px;
+}
+
+.linkedin svg {
+    padding: 5px;
+    border-radius: .5rem;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+}
+
+.linkedin svg:hover {
+    padding: 5px;
+    border-radius: .5rem;
+    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+    color: rgb(255, 255, 255);
+}
+
+.github a {
+    margin-left: 10px;
+}
+
+.github svg {
+    padding: 10px;
+    border-radius: .5rem;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+}
+
+.github svg:hover {
+    padding: 10px;
+    border-radius: 5rem;
+    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+    color: rgb(255, 255, 255);
+}
+
+/*  ===============================
+    FRAME + IMAGE CROSSFADE STYLES 
+    =============================== */
+
+/* Define frame thickness in one place */
+:root {
+    --frame: 40px; 
+}
+
+/* Container - the whole portrait block */
+.main-image{
+    display: flex;               /* center content inside */
+    justify-content: center;
+    align-items: center;
+    width: 22%;
+    margin-right: 15%;
+    position: relative; /* Needed so child images can be absolutely positioned */
+
+    /* Add padding equal the frame thickness:width:
+        ensures images sit inside the frame instead of being covered by it */
+    padding: var(--frame);
+    box-sizing: border-box;     /* padding and borders included in element size */
+
+    /* Prevent images spilling outside if they misalign */
+    overflow: hidden;
+}
+
+/* Images - front & back */
+.main-image img{
+    max-width: 100%;
+    cursor: pointer;
+    height: auto;
+    display: block;                     /* avoid inline gaps */
+    transition: opacity 6000ms ease;    /* smooth fade when opacity changes */
+    /* No borders here - frame handled separately via ::after */
+}
+
+/* Front image - default visible */
+.main-image .front { 
+    position: relative;             /* stays in normal flow */ 
+    z-index:1;                      /* above the back image */
+    opacity:1;                      /* fully visible */
+}
+
+/* back overlays the front, same height, centered */
+.main-image .back {
+    position: absolute;             /* stack on top of front */
+    top: var(--frame);              /* align inside the frame padding */
+    left: 50%;                      /* horizontally centered */
+    height: calc(100% - 2 * var(--frame)); /* subtract frame top & bottom */
+    width: auto;                    /* auto width to keep aspect ratio */
+    transform: translateX(-50%);    /* shift left by half its width for perfect centering */
+    z-index: 0;                     /* below the front image */
+    opacity: 0;                     /* invisible until triggered */
+}
+
+/* Decorative frame - only drawn once */
+.main-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;                        /* stretch to all edges of container */
+    pointer-events: none;            /* click pass through */
+    border: var(--frame) solid transparent; /* space for the frame image */
+    border-image: url('img/frame.png') 280 round; /* draw the ornate frame */
+    box-sizing: border-box;          /* include border in box size */
+    z-index: 2;                      /* always on top of both images */
+}
+
+/* Crossfade states */
+
+/* Click (JS adds .flipped): hide front, show back */
+.main-image.flipped .front { 
+    opacity: 0; 
+}
+
+.main-image.flipped .back { 
+    opacity: 1; 
+}
+
+/* Hover (only if not clicked/flipped): slow transition */
+/* Re-scope hover rules so they only apply on devices that support hover  */
+@media (hover: hover) and (pointer: fine) {
+    .main-image:not(.flipped):hover .front { 
+        opacity: 0; 
+        transition-duration: 5500ms;    /* slower fade for hover */
+    }
+
+    .main-image:not(.flipped):hover .back { 
+        opacity: 1; 
+        transition-duration: 5500ms; 
+    }
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 18rem;
+}
+
+main .equalizer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 1573px;
+}
+
+main .projects {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 45%;
+    margin-left: 15%;
+    background-color: rgb(174, 254, 174);
+    padding: 20px;
+    border-radius: 2rem;
+}
+
+#projects-header h2 {
+    font-weight: 800;
+}
+
+#go-ride,
+#card-checker,
+#mixed-messages {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+#projects-header,
+#go-ride,
+#card-checker,
+#mixed-messages {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#projects-header:hover,
+#go-ride:hover,
+#card-checker:hover,
+#mixed-messages:hover {
+    color: rgb(34, 120, 233);
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+footer .equalizer {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 10px;
+    width: 788px;
+    background-color: rgb(174, 254, 174);
+    border-radius: 2rem;
+}
+
+.copyright {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1375px) {
+    nav {
+        margin-left: 4rem;
+    }
+
+    .main-info {
+        width: 40%;
+    }
+
+    .main-info h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+
+    .main-info h2 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .main-info span {
+        margin: 2.5rem 0;
+        font-size: 1.2rem;
+    }
+
+    .main-image {
+        margin-right: 20%;
+    }
+
+    main .projects {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        bottom: 3rem;
+        left: 0;
+        position: fixed;
+        height: 7rem;
+        margin-left: 0;
+        margin-bottom: 0;
+        transform: translateY(50%);
+        z-index: 1;
+        width: 100%;
+        background-color: rgb(174, 254, 174);
+    }
+
+    nav .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-info {
+        width: 45%;
+    }
+
+    .main-info h1 {
+        font-size: 2rem;
+    }
+
+    .main-info h2 {
+        font-size: 1.4rem;
+    }
+
+    .main-info span {
+        font-size: 1.2rem;
+    }
+
+    .main-image {
+        width: 30%;
+        margin-right: 7%;
+    }
+
+    main .projects {
+        width: 75%;
+    }
+
+    #projects-header h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    #go-ride,
+    #card-checker,
+    #mixed-messages {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    footer {
+        margin-bottom: 8rem;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    .nav a {
+        margin: 0;
+    }
+
+    .nav a svg {
+        padding: .5rem;
+        margin: 1rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .nav a.active {
+        border-radius: 0;
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+        color: rgb(255, 255, 255);
+    }
+
+    .nav a.active svg {
+        background: none;
+        color: rgb(255, 255, 255);
+    }
+
+    .nav .inactive svg:hover {
+        border-radius: none;
+        background: none;
+        color: rgb(0, 0, 0);
+    }
+
+    .info {
+        flex-direction: column-reverse;
+    }
+
+    .main-info {
+        width: 90%;
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+
+    .main-info h1 {
+        font-size: 2.5rem;
+        margin: 0 auto;
+    }
+
+    .main-info h2 {
+        font-size: 1.7rem;
+        margin: 0 auto;
+    }
+
+    .main-info span {
+        font-size: 1.3rem;
+    }
+
+    .main-image {
+        width: 50%;
+        margin: 0;
+    }
+
+    .main-image:not(.flipped):hover .front { 
+        opacity: 0; 
+        transition-duration: 5500ms;    /* slower fade for hover */
+    }
+
+    .linkedin svg:hover {
+        background: none;
+        color: rgb(0, 0, 0);
+    }
+
+    .github svg:hover {
+        background: none;
+        color: rgb(0, 0, 0);
+    }
+
+    main .equalizer {
+        justify-content: center;
+    }
+
+    main .projects {
+        margin: 0;
+        width: 90%;
+    }
+
+    #projects-header:hover,
+    #go-ride:hover,
+    #card-checker:hover,
+    #mixed-messages:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    footer .equalizer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
