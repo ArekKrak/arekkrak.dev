@@ -51,10 +51,12 @@ nav {
     left: 0;
     bottom: 50%;
     position: fixed;
-    width: 0;
-    margin-left: 5rem;
+    width: 6rem;
+    margin-left: 1rem;
     transform: translateY(50%);
     z-index: 1;
+    border-radius: .5rem;
+    background-color: rgb(174, 254, 174);
 }
 
 nav .nav {
@@ -89,6 +91,12 @@ nav .nav {
 .main-info {
     display: flex;
     justify-content: space-between;
+}
+
+.toggle {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 #theme-toggle {
@@ -358,7 +366,7 @@ footer .equalizer {
 
 @media only screen and (max-width: 1375px) {
     nav {
-        margin-left: 4rem;
+        margin-left: 2rem;
     }
 
     .main-info {
