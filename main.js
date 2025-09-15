@@ -108,7 +108,7 @@ if (portrait) {
                 {transform: 'translate(-50%, -50%) rotate(0deg)'},
                 {transform: 'translate(-50%, -50%) rotate(360deg)'}
             ],
-            {duration: 35000, iterations: Infinity, easing: 'linear'}
+            {duration: 40000, iterations: Infinity, easing: 'linear'}
         );
     }
 
