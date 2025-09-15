@@ -95,7 +95,7 @@ nav .nav {
 }
 
 .about-container,
-.project-container {
+.intro-container {
     width: 100%;
     display: flex;
     align-items: center;
