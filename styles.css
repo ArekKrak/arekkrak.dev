@@ -502,24 +502,27 @@ main .skills {
     font-weight: 800;
 }
 
+#portfolio-website,
 #go-ride,
-#card-checker,
+#cypher-python,
 #mixed-messages {
     font-size: 1.2rem;
     font-weight: 500;
 }
 
 #projects-header,
+#portfolio-website,
 #go-ride,
-#card-checker,
+#cypher-python,
 #mixed-messages {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
 
 #projects-header:hover,
+#portfolio-website:hover,
 #go-ride:hover,
-#card-checker:hover,
+#cypher-python:hover,
 #mixed-messages:hover {
     color: rgb(34, 120, 233);
 }
