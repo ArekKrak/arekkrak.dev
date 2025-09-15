@@ -121,9 +121,10 @@ nav .nav {
     border-radius: 2rem;
 }
 
-.main-info h1 {
+.main-info .gradient {
     font-size: 4.5rem;
     font-weight: 600;
+    margin: 0;
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9);
     background-clip: text;
     -webkit-background-clip: text;
@@ -144,6 +145,29 @@ nav .nav {
 .main-info span {
     margin: 2.5rem 0;
     font-size: 1.4rem;
+}
+
+.main-info .page-heading {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 4.5rem;
+    font-weight: 600;
+}
+
+.pic-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    margin: 15px;
+    height: 240px;
+    border-radius: 10rem;
 }
 
 .socials {
@@ -295,7 +319,8 @@ main {
     margin-bottom: 18rem;
 }
 
-main .equalizer {
+main .equalizer,
+main .skills {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -303,7 +328,8 @@ main .equalizer {
     width: 1573px;
 }
 
-main .projects {
+main .projects,
+main .skills {
     position: relative;
     display: flex;
     justify-content: center;
@@ -314,6 +340,14 @@ main .projects {
     background-color: rgb(174, 254, 174);
     padding: 20px;
     border-radius: 2rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin: 0;
+    align-items: center;
 }
 
 #projects-header h2 {
