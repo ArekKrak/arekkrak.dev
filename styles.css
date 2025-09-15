@@ -107,6 +107,7 @@ nav .nav {
 
 .about-info {
     justify-content: space-around;
+    width: 50%;
 }
 
 .toggle {
@@ -129,6 +130,7 @@ nav .nav {
 
 .main-info {
     margin-left: 15%;
+    width: 45%;
 }
 
 .main-info,
@@ -138,7 +140,6 @@ nav .nav {
     background-color: rgb(174, 254, 174);
     padding: 20px;
     border-radius: 2rem;
-    width: 45%;
 }
 
 .main-info .gradient,
@@ -389,20 +390,21 @@ main .skills {
 }
 
 main .projects {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
     margin-left: 15%;
+    width: 45%;
 }
 
-main .projects {
-    align-items: flex-start;
+main .skills {
+    width: 50%;
 }
 
 main .projects,
 main .skills {
     position: relative;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
-    width: 45%;
     background-color: rgb(174, 254, 174);
     padding: 20px;
     border-radius: 2rem;
@@ -428,17 +430,18 @@ main .skills {
 
 .skills-container {
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     padding: 10px;
+    width: 100%;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    margin: 0;
     align-items: center;
+    margin: 0;
 }
 
 .skill-item {
@@ -447,7 +450,7 @@ main .skills {
     justify-content: flex-start;
     align-items: flex-start;
     height: 150px;
-    width: 200px;
+    width: 220px;
     padding: 10px;
 }
 
@@ -520,12 +523,13 @@ footer .equalizer {
         margin-left: 2rem;
     }
 
-    .main-info,
-    .about-info {
+    .main-info {
         width: 40%;
     }
 
-    .main-info .gradient {
+    .main-info .gradient,
+    .about-info .page-heading,
+    .about-info .gradient {
         font-size: 2.5rem;
         font-weight: 800;
     }
@@ -546,6 +550,11 @@ footer .equalizer {
 
     main .projects {
         width: 50%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
     }
 }
 
@@ -574,6 +583,10 @@ footer .equalizer {
         width: 45%;
     }
 
+    .about-info {
+        width: 70%;
+    }
+
     .main-info .gradient {
         font-size: 2rem;
     }
@@ -593,6 +606,10 @@ footer .equalizer {
 
     main .projects {
         width: 75%;
+    }
+
+    main .skills {
+        width: 70%;
     }
 
     #projects-header h2 {
@@ -645,9 +662,17 @@ footer .equalizer {
     }
 
     .main-info {
-        width: 90%;
         margin-top: 2rem;
         margin-left: 0;
+    }
+
+    .main-info,
+    .about-info {
+        width: 90%;
+    }
+
+    .about-text {
+        font-size: 1.3rem;
     }
 
     .main-info .gradient {
@@ -683,6 +708,38 @@ footer .equalizer {
         color: rgb(0, 0, 0);
     }
 
+    main .skills {
+        width: 90%;
+    }
+
+    .skills-heading {
+        font-size: 1.6rem;
+    }
+
+    .skills-subheading {
+        font-size: 1.3rem;
+        padding: 10px 0;
+    }
+
+    .skill-item {
+        height: 150px;
+        width: 320px;
+    }
+
+    .skill-subitem #html,
+    .skill-subitem .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .skill-title {
+        font-size: 1.5rem;
+    }
+
+    .skill-description {
+        font-size: 1.4rem;
+    }
+
     main .equalizer {
         justify-content: center;
     }
@@ -697,6 +754,10 @@ footer .equalizer {
     #card-checker:hover,
     #mixed-messages:hover {
         color: rgb(0, 0, 0);
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 
     footer .equalizer {
