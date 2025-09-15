@@ -387,12 +387,12 @@ nav .nav {
 @media (hover: hover) and (pointer: fine) {
     .main-image:not(.flipped):hover .front { 
         opacity: 0; 
-        transition-duration: 5500ms;    /* slower fade for hover */
+        transition-duration: 6000ms;    /* slower fade for hover */
     }
 
     .main-image:not(.flipped):hover .back { 
         opacity: 1; 
-        transition-duration: 5500ms; 
+        transition-duration: 6000ms; 
     }
 }
 
