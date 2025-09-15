@@ -88,9 +88,25 @@ nav .nav {
 }
 
 .info,
-.main-info {
+.main-info,
+.about-info {
     display: flex;
+}
+
+.about-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info,
+.main-info {
     justify-content: space-between;
+}
+
+.about-info {
+    justify-content: space-around;
 }
 
 .toggle {
@@ -112,16 +128,21 @@ nav .nav {
 }
 
 .main-info {
+    margin-left: 15%;
+}
+
+.main-info,
+.about-info {
     align-items: flex-start;
     flex-direction: column;
-    width: 45%;
-    margin-left: 15%;
     background-color: rgb(174, 254, 174);
     padding: 20px;
     border-radius: 2rem;
+    width: 45%;
 }
 
-.main-info .gradient {
+.main-info .gradient,
+.about-info .gradient {
     font-size: 4.5rem;
     font-weight: 600;
     margin: 0;
@@ -137,7 +158,7 @@ nav .nav {
     font-weight: 400;
 }
 
-.main-info h1,
+.main-info .gradient,
 .main-info h2 {
     margin: 0;
 }
@@ -147,7 +168,7 @@ nav .nav {
     font-size: 1.4rem;
 }
 
-.main-info .page-heading {
+.about-info .page-heading {
     display: flex;
     margin: 0;
     justify-content: center;
@@ -168,6 +189,42 @@ nav .nav {
     margin: 15px;
     height: 240px;
     border-radius: 10rem;
+    border: 2px solid transparent;
+    transition: 1s ease-in-out;
+}
+
+.profile-picture:hover {
+    border: 2px solid rgb(34, 120, 233);
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.about-title .icon,
+.skill-subitem .icon {
+    margin-right: 10px;
+    color: rgb(34, 120, 233);
+}
+
+#html {
+    color: rgb(34, 120, 233);
+}
+
+.about-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.4rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.about-text {
+    padding-top: 10px;
+    font-size: 1.2rem;
 }
 
 .socials {
@@ -319,13 +376,24 @@ main {
     margin-bottom: 18rem;
 }
 
+main .equalizer {
+    width: 1573px;
+}
+
 main .equalizer,
 main .skills {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 1573px;
+}
+
+main .projects {
+    margin-left: 15%;
+}
+
+main .projects {
+    align-items: flex-start;
 }
 
 main .projects,
@@ -333,13 +401,36 @@ main .skills {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
     width: 45%;
-    margin-left: 15%;
     background-color: rgb(174, 254, 174);
     padding: 20px;
     border-radius: 2rem;
+}
+
+.skills-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.skills-subheading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    font-weight: 550;
+    padding: 10px;
+}
+
+.skills-container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
 }
 
 .skills-grid {
@@ -348,6 +439,32 @@ main .skills {
     justify-content: center;
     margin: 0;
     align-items: center;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 150px;
+    width: 200px;
+    padding: 10px;
+}
+
+.skill-subitem {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 0;
+}
+
+.skill-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.skill-description {
+    font-size: 1.1rem;
 }
 
 #projects-header h2 {
@@ -403,11 +520,12 @@ footer .equalizer {
         margin-left: 2rem;
     }
 
-    .main-info {
+    .main-info,
+    .about-info {
         width: 40%;
     }
 
-    .main-info h1 {
+    .main-info .gradient {
         font-size: 2.5rem;
         font-weight: 800;
     }
@@ -456,7 +574,7 @@ footer .equalizer {
         width: 45%;
     }
 
-    .main-info h1 {
+    .main-info .gradient {
         font-size: 2rem;
     }
 
@@ -532,7 +650,7 @@ footer .equalizer {
         margin-left: 0;
     }
 
-    .main-info h1 {
+    .main-info .gradient {
         font-size: 2.5rem;
         margin: 0 auto;
     }
