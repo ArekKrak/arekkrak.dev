@@ -190,7 +190,7 @@ nav .nav {
     margin: 15px;
     height: 240px;
     border-radius: 10rem;
-    border: 2px solid transparent;
+    border: 2px solid rgb(219, 219, 219);
     transition: 1s ease-in-out;
 }
 
