@@ -16,6 +16,7 @@ body {
     position: relative;
     font-family: "Lato", monospace;
     font-size: 16px;
+    word-spacing: 4px;
     background-color: #fff; /* fallback */
     isolation: isolate;       /* lets a child at z-index: -1; sit behind content */
 }
@@ -649,8 +650,9 @@ footer .equalizer {
         margin-bottom: 1rem;
     }
 
+    #portfolio-website,
     #go-ride,
-    #card-checker,
+    #cypher-python,
     #mixed-messages {
         font-size: 1.2rem;
         margin-top: 1rem;
