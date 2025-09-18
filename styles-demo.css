@@ -52,44 +52,47 @@ nav {
     left: 0;
     bottom: 70%;
     position: fixed;
-    width: 6rem;
+    width: 17rem;
     margin-left: 1rem;
     transform: translateY(50%);
     z-index: 1;
+    border: 2px solid transparent;
     border-radius: .5rem;
     background-color: rgb(174, 254, 174);
 }
 
-nav .nav {
+.back-arrow {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0;
 }
 
-.nav a {
+.back-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.back-arrow a {
     margin: 1rem 1.5rem;
 }
 
-.nav a svg {
+.back-arrow a svg {
     padding: .5rem;
     color: rgb(0, 0, 0);
 }
 
-.nav .active svg {
+.back-arrow:hover {
+    border: 2px solid rgb(174, 254, 174);
     border-radius: .5rem;
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
     color: rgb(255, 255, 255);
 }
 
-.nav .inactive svg:hover {
-    border-radius: .5rem;
-    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
-    color: rgb(255, 255, 255);
-}
-
-.info,
-.main-info,
+.info-demo,
+.main-demo,
 .about-info,
 .project-info {
     display: flex;
@@ -103,13 +106,12 @@ nav .nav {
     justify-content: center;
 }
 
-.info,
-.main-info {
-    justify-content: space-between;
+.info-demo,
+.main-demo {
+    justify-content: center;
 }
 
-#projects {
-    justify-content: center;
+.info-demo {
     width: 100%;
 }
 
@@ -131,21 +133,20 @@ nav .nav {
     cursor: pointer;
 }
 
-.info {
+.info-demo-demo {
     align-items: center;
     height: 100%;
 }
 
-.main-info {
-    margin-left: 15%;
-    width: 45%;
+.main-demo {
+    width: 39%;
 }
 
 .project-info {
     width: 70%;
 }
 
-.main-info,
+.main-demo,
 .about-info {
     align-items: flex-start;
     flex-direction: column;
@@ -162,7 +163,7 @@ nav .nav {
     border-radius: 2rem;
 }
 
-.main-info .gradient,
+.main-demo .gradient,
 .about-info .gradient {
     font-size: 4.5rem;
     font-weight: 600;
@@ -174,17 +175,17 @@ nav .nav {
     color: transparent;
 }
 
-.main-info h2 {
+.main-demo h2 {
     font-size: 2.5rem;
     font-weight: 400;
 }
 
-.main-info .gradient,
-.main-info h2 {
+.main-demo .gradient,
+.main-demo h2 {
     margin: 0;
 }
 
-.main-info span {
+.main-demo span {
     margin: 2.5rem 0;
     font-size: 1.4rem;
 }
@@ -533,6 +534,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     max-width: 100%;
+    margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
@@ -555,11 +557,11 @@ footer .equalizer {
         margin-left: 2rem;
     }
 
-    .main-info {
+    .main-demo {
         width: 40%;
     }
 
-    .main-info .gradient,
+    .main-demo .gradient,
     .about-info .page-heading,
     .about-info .gradient,
     .project-info .page-heading {
@@ -567,12 +569,12 @@ footer .equalizer {
         font-weight: 800;
     }
 
-    .main-info h2 {
+    .main-demo h2 {
         font-size: 1.5rem;
         font-weight: 500;
     }
 
-    .main-info span {
+    .main-demo span {
         margin: 2.5rem 0;
         font-size: 1.2rem;
     }
@@ -605,14 +607,14 @@ footer .equalizer {
         background-color: rgb(174, 254, 174);
     }
 
-    nav .nav {
+    nav .back-arrow {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
 
-    .main-info {
+    .main-demo {
         width: 45%;
     }
 
@@ -620,15 +622,15 @@ footer .equalizer {
         width: 70%;
     }
 
-    .main-info .gradient {
+    .main-demo .gradient {
         font-size: 2rem;
     }
 
-    .main-info h2 {
+    .main-demo h2 {
         font-size: 1.4rem;
     }
 
-    .main-info span {
+    .main-demo span {
         font-size: 1.2rem;
     }
 
@@ -664,43 +666,43 @@ footer .equalizer {
 }
 
 @media only screen and (max-width: 675px) {
-    .nav a {
+    .back-arrow a {
         margin: 0;
     }
 
-    .nav a svg {
+    .back-arrow a svg {
         padding: .5rem;
         margin: 1rem;
         color: rgb(0, 0, 0);
     }
 
-    .nav a.active {
+    .back-arrow a.active {
         border-radius: 0;
         background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
         color: rgb(255, 255, 255);
     }
 
-    .nav a.active svg {
+    .back-arrow a.active svg {
         background: none;
         color: rgb(255, 255, 255);
     }
 
-    .nav .inactive svg:hover {
+    .back-arrow .inactive svg:hover {
         border-radius: none;
         background: none;
         color: rgb(0, 0, 0);
     }
 
-    .info {
+    .info-demo {
         flex-direction: column-reverse;
     }
 
-    .main-info {
+    .main-demo {
         margin-top: 2rem;
         margin-left: 0;
     }
 
-    .main-info,
+    .main-demo,
     .about-info {
         width: 90%;
     }
@@ -709,17 +711,17 @@ footer .equalizer {
         font-size: 1.3rem;
     }
 
-    .main-info .gradient {
+    .main-demo .gradient {
         font-size: 2.5rem;
         margin: 0 auto;
     }
 
-    .main-info h2 {
+    .main-demo h2 {
         font-size: 1.7rem;
         margin: 0 auto;
     }
 
-    .main-info span {
+    .main-demo span {
         font-size: 1.3rem;
     }
 
