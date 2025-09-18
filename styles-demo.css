@@ -131,13 +131,13 @@ nav {
     cursor: pointer;
 }
 
-.info-demo-demo {
+.info-demo {
     align-items: center;
     height: 100%;
 }
 
 .main-demo {
-    width: 39%;
+    width: 49%;
 }
 
 .project-info {
@@ -186,6 +186,15 @@ nav {
 .main-demo span {
     margin: 2.5rem 0;
     font-size: 1.4rem;
+}
+
+.demo h1 {
+    margin-bottom: 4rem;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
 }
 
 .about-info .page-heading,
@@ -552,68 +561,62 @@ footer .equalizer {
 
 @media only screen and (max-width: 1375px) {
     nav {
-        margin-left: 2rem;
+        width: 11rem;
+    }
+
+    nav a svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .back-arrow {
+        flex-direction: column;
+    }
+
+    .back-text {
+        font-size: 1.1rem;
     }
 
     .main-demo {
-        width: 40%;
+        width: 58%;
     }
 
-    .main-demo .gradient,
-    .about-info .page-heading,
-    .about-info .gradient,
-    .project-info .page-heading {
-        font-size: 2.5rem;
-        font-weight: 800;
-    }
-
-    .main-demo h2 {
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-
-    .main-demo span {
-        margin: 2.5rem 0;
-        font-size: 1.2rem;
-    }
-
-    .main-image {
-        margin-right: 20%;
-    }
-
-    main .projects {
-        width: 50%;
-    }
-
-    .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        margin: 0 auto;
+    .demo h1 {
+        font-size: 1.3rem;
     }
 }
 
 @media only screen and (max-width: 1000px) {
+    header {
+        margin-top: 11%;
+    }
+
     nav {
-        bottom: 3rem;
-        left: 0;
+        top: 0;
+        left: 1%;
+        bottom: 0;
         position: fixed;
-        height: 7rem;
+        height: 4rem;
         margin-left: 0;
         margin-bottom: 0;
-        transform: translateY(50%);
+        transform: translateY(10%);
         z-index: 1;
-        width: 100%;
+        width: 9rem;
         background-color: rgb(174, 254, 174);
     }
 
-    nav .back-arrow {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    nav a svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .back-text {
+        font-size: .9rem;
     }
 
     .main-demo {
-        width: 45%;
+        width: 65%;
+        margin-left: 20%;
     }
 
     .about-info {
