@@ -92,9 +92,7 @@ nav {
 }
 
 .info-demo,
-.main-demo,
-.about-info,
-.project-info {
+.main-demo {
     display: flex;
 }
 
