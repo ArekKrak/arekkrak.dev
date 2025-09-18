@@ -105,11 +105,6 @@ nav {
     width: 100%;
 }
 
-.about-info {
-    justify-content: space-around;
-    width: 50%;
-}
-
 .toggle {
     width: 100%;
     display: flex;
@@ -132,37 +127,12 @@ nav {
     width: 39%;
 }
 
-.project-info {
-    width: 70%;
-}
-
-.main-demo,
-.about-info {
+.main-demo {
     align-items: flex-start;
     flex-direction: column;
     background-color: rgb(174, 254, 174);
     padding: 20px;
     border-radius: 2rem;
-}
-
-.project-info {
-    align-items: flex-start;
-    flex-direction: column;
-    background-color: rgb(174, 254, 174);
-    padding: 20px;
-    border-radius: 2rem;
-}
-
-.main-demo .gradient,
-.about-info .gradient {
-    font-size: 4.5rem;
-    font-weight: 600;
-    margin: 0;
-    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
 }
 
 .main-demo h2 {
@@ -170,14 +140,8 @@ nav {
     font-weight: 400;
 }
 
-.main-demo .gradient,
 .main-demo h2 {
     margin: 0;
-}
-
-.main-demo span {
-    margin: 2.5rem 0;
-    font-size: 1.4rem;
 }
 
 .demo h1 {
@@ -188,345 +152,6 @@ nav {
 video {
     max-width: 100%;
     height: auto;
-}
-
-.about-info .page-heading,
-.project-info .page-heading {
-    display: flex;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-size: 4.5rem;
-    font-weight: 600;
-}
-
-.page-intro {
-    width: 100%;
-    padding-top: 10px;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-}
-
-.pic-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-picture {
-    margin: 15px;
-    height: 240px;
-    border-radius: 10rem;
-    border: 2px solid rgb(219, 219, 219);
-    transition: 1s ease-in-out;
-}
-
-.profile-picture:hover {
-    border: 2px solid rgb(34, 120, 233);
-}
-
-.about-section {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.about-title .icon,
-.skill-subitem .icon {
-    margin-right: 10px;
-    color: rgb(34, 120, 233);
-}
-
-#html {
-    color: rgb(34, 120, 233);
-}
-
-.about-title {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 1.4rem;
-    font-weight: 600;
-    width: fit-content;
-}
-
-.about-text {
-    padding-top: 10px;
-    font-size: 1.2rem;
-}
-
-.socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.socials span {
-    margin: 0;
-}
-
-.linkedin a {
-    margin-right: 10px;
-}
-
-.linkedin svg {
-    padding: 5px;
-    border-radius: .5rem;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-}
-
-.linkedin svg:hover {
-    padding: 5px;
-    border-radius: .5rem;
-    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
-    color: rgb(255, 255, 255);
-}
-
-.github a {
-    margin-left: 10px;
-}
-
-.github svg {
-    padding: 10px;
-    border-radius: .5rem;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-}
-
-.github svg:hover {
-    padding: 10px;
-    border-radius: 5rem;
-    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
-    color: rgb(255, 255, 255);
-}
-
-/*  ===============================
-    FRAME + IMAGE CROSSFADE STYLES 
-    =============================== */
-
-/* Define frame thickness in one place */
-:root {
-    --frame: 40px; 
-}
-
-/* Container - the whole portrait block */
-.main-image{
-    display: flex;               /* center content inside */
-    justify-content: center;
-    align-items: center;
-    width: 22%;
-    margin-right: 15%;
-    position: relative; /* Needed so child images can be absolutely positioned */
-
-    /* Add padding equal the frame thickness:width:
-        ensures images sit inside the frame instead of being covered by it */
-    padding: var(--frame);
-    box-sizing: border-box;     /* padding and borders included in element size */
-
-    /* Prevent images spilling outside if they misalign */
-    overflow: hidden;
-}
-
-/* Images - front & back */
-.main-image img{
-    max-width: 100%;
-    cursor: pointer;
-    height: auto;
-    display: block;                     /* avoid inline gaps */
-    transition: opacity 6000ms ease;    /* smooth fade when opacity changes */
-    /* No borders here - frame handled separately via ::after */
-}
-
-/* Front image - default visible */
-.main-image .front { 
-    position: relative;             /* stays in normal flow */ 
-    z-index:1;                      /* above the back image */
-    opacity:1;                      /* fully visible */
-}
-
-/* back overlays the front, same height, centered */
-.main-image .back {
-    position: absolute;             /* stack on top of front */
-    top: var(--frame);              /* align inside the frame padding */
-    left: 50%;                      /* horizontally centered */
-    height: calc(100% - 2 * var(--frame)); /* subtract frame top & bottom */
-    width: auto;                    /* auto width to keep aspect ratio */
-    transform: translateX(-50%);    /* shift left by half its width for perfect centering */
-    z-index: 0;                     /* below the front image */
-    opacity: 0;                     /* invisible until triggered */
-}
-
-/* Decorative frame - only drawn once */
-.main-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;                        /* stretch to all edges of container */
-    pointer-events: none;            /* click pass through */
-    border: var(--frame) solid transparent; /* space for the frame image */
-    border-image: url('img/frame.png') 280 round; /* draw the ornate frame */
-    box-sizing: border-box;          /* include border in box size */
-    z-index: 2;                      /* always on top of both images */
-}
-
-/* Crossfade states */
-
-/* Click (JS adds .flipped): hide front, show back */
-.main-image.flipped .front { 
-    opacity: 0; 
-}
-
-.main-image.flipped .back { 
-    opacity: 1; 
-}
-
-/* Hover (only if not clicked/flipped): slow transition */
-/* Re-scope hover rules so they only apply on devices that support hover  */
-@media (hover: hover) and (pointer: fine) {
-    .main-image:not(.flipped):hover .front { 
-        opacity: 0; 
-        transition-duration: 6000ms;    /* slower fade for hover */
-    }
-
-    .main-image:not(.flipped):hover .back { 
-        opacity: 1; 
-        transition-duration: 6000ms; 
-    }
-}
-
-main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 100%;
-    margin-top: 3rem;
-    margin-bottom: 18rem;
-}
-
-main .equalizer {
-    width: 1573px;
-}
-
-main .equalizer,
-main .skills {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-main .projects {
-    align-items: flex-start;
-    display: flex;
-    justify-content: center;
-    margin-left: 15%;
-    width: 45%;
-}
-
-main .skills {
-    width: 50%;
-}
-
-main .projects,
-main .skills {
-    position: relative;
-    flex-direction: column;
-    background-color: rgb(174, 254, 174);
-    padding: 20px;
-    border-radius: 2rem;
-}
-
-.skills-heading {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-}
-
-.skills-subheading {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    font-weight: 550;
-    padding: 10px;
-}
-
-.skills-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: 100%;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}
-
-.skill-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 150px;
-    width: 220px;
-    padding: 10px;
-}
-
-.skill-subitem {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 5px 0;
-}
-
-.skill-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.skill-description {
-    font-size: 1.1rem;
-}
-
-#projects-header h2 {
-    font-weight: 800;
-}
-
-#portfolio-website,
-#go-ride,
-#cypher-python,
-#mixed-messages {
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-#projects-header,
-#portfolio-website,
-#go-ride,
-#cypher-python,
-#mixed-messages {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
-#projects-header:hover,
-#portfolio-website:hover,
-#go-ride:hover,
-#cypher-python:hover,
-#mixed-messages:hover {
-    color: rgb(34, 120, 233);
 }
 
 footer {
@@ -612,48 +237,6 @@ footer .equalizer {
         margin-left: 20%;
     }
 
-    .about-info {
-        width: 70%;
-    }
-
-    .main-demo .gradient {
-        font-size: 2rem;
-    }
-
-    .main-demo h2 {
-        font-size: 1.4rem;
-    }
-
-    .main-demo span {
-        font-size: 1.2rem;
-    }
-
-    .main-image {
-        width: 30%;
-        margin-right: 7%;
-    }
-
-    main .projects {
-        width: 75%;
-    }
-
-    main .skills {
-        width: 70%;
-    }
-
-    #projects-header h2 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-    }
-
-    #portfolio-website,
-    #go-ride,
-    #cypher-python,
-    #mixed-messages {
-        font-size: 1.2rem;
-        margin-top: 1rem;
-    }
-
     footer {
         margin-bottom: 8rem;
     }
@@ -672,7 +255,6 @@ footer .equalizer {
         width: 9rem;
         height: auto;
         margin: 1% 0 0 35%;
-        /* padding: .5rem 0; */
         transform: none;
         z-index: 1;
         display: flex;
@@ -702,45 +284,13 @@ footer .equalizer {
     .info-demo {
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
     .main-demo {
-        width: 100%;
-        margin: 1rem 0 0 0;           /* no left margin */
-    }
-
-    .info-demo {
-        flex-direction: column-reverse;
-    }
-
-    .main-demo {
-        margin-top: 2rem;
-        margin-left: 0;
-    }
-
-    .main-demo,
-    .about-info {
         width: 90%;
-    }
-
-    .about-text {
-        font-size: 1.3rem;
-    }
-
-    .main-demo .gradient {
-        font-size: 2.5rem;
-        margin: 0 auto;
-    }
-
-    .main-demo h2 {
-        font-size: 1.7rem;
-        margin: 0 auto;
-    }
-
-    .main-demo span {
-        font-size: 1.3rem;
+        margin: 1rem 0 0 0;           /* no left margin */
     }
 
     footer .equalizer {
