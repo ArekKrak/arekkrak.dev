@@ -500,9 +500,15 @@ main .skills {
 }
 
 .skill-title,
-.project-title {
+.project-title,
+.clarify {
     font-size: 1.3rem;
     font-weight: 600;
+}
+
+.clarify {
+    padding-bottom: 3px;
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .skill-description {
