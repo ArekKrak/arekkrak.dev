@@ -49,6 +49,10 @@ header {
     overflow-x: clip;
 }
 
+#contact-header {
+    margin-bottom: 12rem;
+}
+
 nav {
     left: 0;
     bottom: 50%;
