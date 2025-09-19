@@ -547,6 +547,17 @@ main .skills {
     align-items: center;
 }
 
+.project-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.projects-badges img {
+    vertical-align: middle;
+}
+
 #projects-header h2 {
     font-weight: 800;
 }
