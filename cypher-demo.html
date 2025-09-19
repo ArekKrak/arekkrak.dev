@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cypher Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="img/favicon.svg" rel="icon" type="image/svg+xml">
+        <link href="img/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+        <link href="img/favicon-apple-touch.png" rel="apple-touch-icon" sizes="180x180">
+        <link href="img/favicon.ico" rel="icon" sizes="any">
+        <link href="styles-demo.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libertinus+Mono&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&family=Overpass:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a class="back-arrow" aria-label="Project Demo" href="projects.html" title="Back to Projects">
+                    <svg width="70px" height="70px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="currentcolor">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill="currentcolor" d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"/>
+                            <path fill="currentcolor" d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"/>
+                        </g>
+                    </svg>
+                    <span class="back-text">Back to Projects</span>
+                </a>
+            </nav>
+            <div class="info-demo">
+                <div class="main-demo">
+                    <div class="toggle">
+                        <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark/light mode" title="Enable dark/light mode">
+                            <svg width="20px" height="20px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                                <g id="SVGRepo_iconCarrier"><g id="Layer_2" data-name="Layer 2"> <g id="Icons"> <g> <rect width="48" height="48" fill="none"/> <g> <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z"/> <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z"/> </g> </g> </g> </g> </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <section class="demo">
+                        <h1>Cypher Terminal Session Demo</h1>
+                        <video controls muted playsinline width="704" height="900">
+                            <source src="vid/cypher.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </section>
+                </div>
+            </div>
+        </header>
+        <footer>
+            <div class="equalizer">
+                <div class="footer-item">
+                    <p class="copyright">Arek Krakowiak &copy;2025</p>
+                </div>
+                <div class="footer-item">
+                    <p class="copyright">Made with Node.js, JavaScript, and gallons of coffee &#9749;</p>
+                </div>
+            </div>
+        </footer>
+        <script src="main.js" defer></script>
+    </body>
+</html>
