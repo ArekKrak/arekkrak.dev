@@ -533,12 +533,18 @@ main .skills {
 .item-image img {
     max-width: 100%;
     height: auto;
+    border-radius: 2rem;
 }
 
 .projects-grid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.project-details {
+    display: flex;
+    align-items: center;
 }
 
 #projects-header h2 {
