@@ -725,6 +725,11 @@ footer .equalizer {
         align-items: center;
     }
 
+    .project-info,
+    .projects-container {
+        width: 80%;
+    }
+
     .main-info {
         width: 45%;
     }
@@ -748,6 +753,19 @@ footer .equalizer {
     .main-image {
         width: 30%;
         margin-right: 7%;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .projects-item,
+    .item-image {
+        width: 100%;
+    }
+
+    .grid-buttons {
+        justify-content: center;
     }
 
     main .projects {
@@ -820,6 +838,10 @@ footer .equalizer {
 
     .about-text {
         font-size: 1.3rem;
+    }
+
+    .projects-container {
+        padding: 5px;
     }
 
     .main-info .gradient {
