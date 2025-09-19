@@ -539,6 +539,12 @@ main .skills {
     max-width: 100%;
     height: auto;
     border-radius: 1.7rem;
+    border: 2px solid rgb(219, 219, 219);
+    transition: 1s ease-in-out;
+}
+
+.item-image:hover img {
+    border: 2px solid rgb(34, 120, 233);
 }
 
 .projects-grid {
