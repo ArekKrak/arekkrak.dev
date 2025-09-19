@@ -213,12 +213,11 @@ a.contact-method {
 
 .contact-method .gradient {
     margin: 0;
-    color: rgb(0, 0, 0);
+    color: #000;
     line-height: normal;
 }
 
-.contact-method .gradient:hover {
-    margin: 0;
+.contact-method:hover .gradient {
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9);
     background-clip: text;
     -webkit-background-clip: text;
@@ -314,7 +313,22 @@ a.contact-method {
 .skill-subitem .icon,
 .contact-method .icon {
     margin-right: 10px;
-    color: rgb(34, 120, 233);
+    color: #2278e9;
+}
+
+.email:hover .icon * {
+    fill: url(#gradient-email) !important;
+    stroke: url(#gradient-email) !important;
+}
+
+.github-contact:hover .icon * {
+    fill: url(#gradient-github) !important;
+    stroke: url(#gradient-github) !important;
+}
+
+.linkedin-contact:hover .icon * {
+    fill: url(#gradient-linkedin) !important;
+    stroke: url(#gradient-linkedin) !important;
 }
 
 #html {
