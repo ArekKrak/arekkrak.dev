@@ -154,7 +154,8 @@ nav .nav {
     border-radius: 2rem;
 }
 
-.project-info {
+.project-info,
+.projects-container {
     align-items: flex-start;
     flex-direction: column;
     background-color: rgb(174, 254, 174);
@@ -497,6 +498,37 @@ main .skills {
 
 .skill-description {
     font-size: 1.1rem;
+}
+
+.projects-container {
+    width: 70%;
+}
+
+.projects-item {
+    width: 90%;
+}
+
+.item-grid {
+    display: grid;
+    padding: 10px;
+    grid-template-rows: auto 1fr;
+    margin: 0 auto;
+}
+
+.item-image {
+    width: 90%;
+    height: auto;
+}
+
+.item-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.projects-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 #projects-header h2 {
