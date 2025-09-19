@@ -134,6 +134,7 @@ nav .nav {
 .info {
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 
 .main-info {
@@ -407,16 +408,24 @@ main {
     margin-bottom: 18rem;
 }
 
-main .equalizer {
+/* main .equalizer {
     width: 1573px;
-}
+} */
 
 main .equalizer,
 main .skills {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 100%;
+}
+
+main .equalizer {
+    justify-content: flex-start;
+}
+
+main .skills {
+    justify-content: space-between;
 }
 
 main .projects {
@@ -491,7 +500,8 @@ main .skills {
     padding: 5px 0;
 }
 
-.skill-title {
+.skill-title,
+.project-title {
     font-size: 1.3rem;
     font-weight: 600;
 }
