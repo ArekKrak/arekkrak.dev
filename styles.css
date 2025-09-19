@@ -157,9 +157,12 @@ nav .nav {
     width: 45%;
 }
 
-.project-info,
-.contact-info {
+.project-info {
     width: 70%;
+}
+
+.contact-info {
+    width: 40%
 }
 
 .main-info,
@@ -182,10 +185,27 @@ nav .nav {
 }
 
 .main-info .gradient,
-.about-info .gradient,
-.contact-method .gradient {
+.about-info .gradient {
     font-size: 4.5rem;
     font-weight: 600;
+    margin: 0;
+    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    line-height: normal;
+}
+
+a.contact-method {
+    text-decoration: none;
+}
+
+.contact-method .gradient {
+    color: rgb(0, 0, 0);
+}
+
+.contact-method .gradient:hover {
     margin: 0;
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9);
     background-clip: text;
@@ -223,11 +243,20 @@ nav .nav {
     line-height: normal;
 }
 
+.contact-heading {
+    margin-bottom: 20px;
+}
+
 .contact-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.contact-equalizer {
+    text-align: left;
 }
 
 .contact-method {
@@ -236,6 +265,7 @@ nav .nav {
     justify-content: flex-start;
     font-size: 1.4rem;
     font-weight: 600;
+    margin-top: 30px;
 }
 
 .page-intro {
