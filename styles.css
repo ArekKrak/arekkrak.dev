@@ -229,6 +229,14 @@ nav .nav {
     justify-content: center;
 }
 
+.contact-method {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
 .page-intro {
     width: 100%;
     padding-top: 10px;
@@ -263,7 +271,8 @@ nav .nav {
 }
 
 .about-title .icon,
-.skill-subitem .icon {
+.skill-subitem .icon,
+.contact-method .icon {
     margin-right: 10px;
     color: rgb(34, 120, 233);
 }
