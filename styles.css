@@ -565,8 +565,45 @@ main .skills {
 
 .grid-buttons {
     display: flex;
-    height: fit-content;
+    height: 5rem;
     flex-direction: row;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    vertical-align: middle;
+    width: 8rem;
+    margin: 10px;
+    background-color: #2278e9;
+    border-radius: .5rem;
+}
+
+.button a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    width: auto;
+}
+
+.button svg {
+    color: rgb(0, 0, 0);
+    margin: 10px;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.button:hover {
+    border-radius: .5rem;
+    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+}
+
+.button:hover svg {
+    color: rgb(255, 255, 255);
 }
 
 #projects-header h2 {
