@@ -17,6 +17,7 @@ body {
     font-family: "Lato", monospace;
     font-size: 16px;
     word-spacing: 4px;
+    /* line-height: 1rem; */
     background-color: #fff; /* fallback */
     isolation: isolate;       /* lets a child at z-index: -1; sit behind content */
 }
@@ -320,7 +321,7 @@ nav .nav {
     display: flex;               /* center content inside */
     justify-content: center;
     align-items: center;
-    width: 22%;
+    width: 19%;
     margin-right: 15%;
     position: relative; /* Needed so child images can be absolutely positioned */
 
@@ -545,6 +546,8 @@ main .skills {
 .project-details {
     display: flex;
     align-items: center;
+    margin: 5px;
+    padding: 10px;
 }
 
 .project-badges {
