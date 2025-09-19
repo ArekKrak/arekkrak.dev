@@ -571,7 +571,7 @@ main .skills {
 
 .grid-buttons {
     display: flex;
-    height: 5rem;
+    height: 4rem;
     flex-direction: row;
 }
 
