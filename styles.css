@@ -800,6 +800,10 @@ footer .equalizer {
         width: 80%;
     }
 
+    .contact-info {
+        width: 60%;
+    }
+
     .main-info {
         width: 45%;
     }
@@ -823,6 +827,10 @@ footer .equalizer {
     .main-image {
         width: 30%;
         margin-right: 7%;
+    }
+
+    .contact-heading {
+        font-size: 3rem;
     }
 
     .projects-grid {
@@ -926,6 +934,10 @@ footer .equalizer {
 
     .main-info span {
         font-size: 1.3rem;
+    }
+
+    .contact-info {
+        width: 85%;
     }
 
     .main-image {
