@@ -182,7 +182,8 @@ nav .nav {
 }
 
 .main-info .gradient,
-.about-info .gradient {
+.about-info .gradient,
+.contact-method .gradient {
     font-size: 4.5rem;
     font-weight: 600;
     margin: 0;
