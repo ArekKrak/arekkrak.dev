@@ -861,6 +861,11 @@ main .skills {
     width: 8rem;
     margin: 10px;
     background-color: #2278e9;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.button:hover {
+    border: 2px solid transparent;
 }
 
 .button a {
@@ -1151,6 +1156,11 @@ footer .equalizer {
 
     .button:hover {
         background: #2278e9;
+        border: 2px solid rgb(255, 255, 255);
+    }
+
+    .button:active {
+        border: 2px solid transparent;
     }
 
     .nav a.active,
