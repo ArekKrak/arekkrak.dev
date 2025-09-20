@@ -1118,10 +1118,22 @@ footer .equalizer {
         margin: 0;
     }
 
+    .nav a svg,
+    .nav .inactive svg:hover,
+    .linkedin svg:hover,
+    .github svg:hover,
+    .button:hover svg,
+    #projects-header:hover,
+    #portfolio-website:hover,
+    #go-ride:hover,
+    #mixed-messages:hover,
+    #cypher-python:hover {
+        color: rgb(0, 0, 0);
+    }
+
     .nav a svg {
         padding: .5rem;
         margin: 1rem;
-        color: rgb(0, 0, 0);
     }
 
     .nav a.active {
@@ -1138,7 +1150,6 @@ footer .equalizer {
     .nav .inactive svg:hover {
         border-radius: none;
         background: none;
-        color: rgb(0, 0, 0);
     }
 
     .info {
@@ -1217,12 +1228,10 @@ footer .equalizer {
 
     .linkedin svg:hover {
         background: none;
-        color: rgb(0, 0, 0);
     }
 
     .github svg:hover {
         background: none;
-        color: rgb(0, 0, 0);
     }
 
     .linkedin svg:active {
@@ -1288,10 +1297,6 @@ footer .equalizer {
         background: #2278e9;
     }
 
-    .button:hover svg {
-        color: rgb(0, 0, 0);
-    }
-
     .button:active {
         border-radius: .5rem;
         background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
@@ -1339,14 +1344,6 @@ footer .equalizer {
 
     main .projects {
         width: 90%;
-    }
-
-    #projects-header:hover,
-    #portfolio-website:hover,
-    #go-ride:hover,
-    #mixed-messages:hover,
-    #cypher-python:hover {
-        color: rgb(0, 0, 0);
     }
 
     #projects-header:active,
