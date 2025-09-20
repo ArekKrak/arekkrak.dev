@@ -51,6 +51,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(98, 192, 98);
 }
+
 /* ====================== */
 /* GLOBAL FLEX CONTAINERS */
 /* ====================== */
@@ -96,6 +97,10 @@ footer,
 footer .equalizer {
     display: flex;
 }
+
+/* ================== */
+/* SPACE-AROUND VALUE */
+/* ================== */
 
 header,
 .about-info,
