@@ -144,9 +144,19 @@ footer {
     align-items: center;
 }
 
+/* =============== */
+/* MAX-WIDTH: 100% */
+/* =============== */
+
+header,                                     /* *************** */
+main,                                       /* MAX-WIDTH: 100% */
+.item-image img,                            /* *************** */
+footer {
+    max-width: 100%;
+}
+
 header {
     margin-top: 8%;
-    max-width: 100%;
     overflow-x: clip;
 }
 
@@ -545,7 +555,6 @@ a.contact-method {
 }
 
 main {
-    max-width: 100%;
     margin-top: 3rem;
     margin-bottom: 18rem;
 }
@@ -667,7 +676,6 @@ main .skills,
 }
 
 .item-image img {
-    max-width: 100%;
     height: auto;
     border-radius: 1.7rem;
     border: 2px solid rgb(219, 219, 219);
@@ -771,7 +779,6 @@ main .skills,
 }
 
 footer {
-    max-width: 100%;
     margin-bottom: 2rem;
 }
 
