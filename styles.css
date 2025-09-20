@@ -874,6 +874,30 @@ footer .equalizer {
         font-size: 3rem;
     }
 
+    .contact-method:active .gradient {
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        line-height: normal;
+    }
+
+    .email:active .icon * {
+        fill: url(#gradient-email) !important;
+        stroke: url(#gradient-email) !important;
+    }
+
+    .github-contact:active .icon * {
+        fill: url(#gradient-github) !important;
+        stroke: url(#gradient-github) !important;
+    }
+
+    .linkedin-contact:active .icon * {
+        fill: url(#gradient-linkedin) !important;
+        stroke: url(#gradient-linkedin) !important;
+    }
+
     .projects-grid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -1059,6 +1083,50 @@ footer .equalizer {
         border-radius: 5rem;
         background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
         color: rgb(255, 255, 255);
+    }
+
+    .contact-method:hover .gradient {
+        background: #000000;
+        background-clip: text;
+    }
+
+    .email:hover .icon * {
+        fill: #2278e9 !important;
+        stroke: transparent !important;
+    }
+
+    .github-contact:hover .icon * {
+        fill: #2278e9 !important;
+        stroke: transparent !important;
+    }
+
+    .linkedin-contact:hover .icon * {
+        fill: #2278e9 !important;
+        stroke: transparent !important;
+    }
+
+    .contact-method:active .gradient {
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        line-height: normal;
+    }
+
+    .email:active .icon * {
+        fill: url(#gradient-email) !important;
+        stroke: url(#gradient-email) !important;
+    }
+
+    .github-contact:active .icon * {
+        fill: url(#gradient-github) !important;
+        stroke: url(#gradient-github) !important;
+    }
+
+    .linkedin-contact:active .icon * {
+        fill: url(#gradient-linkedin) !important;
+        stroke: url(#gradient-linkedin) !important;
     }
 
     .button:hover {
