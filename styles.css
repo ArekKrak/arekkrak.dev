@@ -1143,8 +1143,13 @@ footer .equalizer {
         background: none;
     }
 
-    .button:hover {
+    .linkedin svg:active,
+    .button:hover,
+    .button:active {
         border-radius: .5rem;
+    }
+
+    .button:hover {
         background: #2278e9;
     }
 
@@ -1247,7 +1252,6 @@ footer .equalizer {
 
     .linkedin svg:active {
         padding: 5px;
-        border-radius: .5rem;
     }
 
     .github svg:active {
@@ -1297,10 +1301,6 @@ footer .equalizer {
     .linkedin-contact:active .icon * {
         fill: url(#gradient-linkedin) !important;
         stroke: transparent !important;
-    }
-
-    .button:active {
-        border-radius: .5rem;
     }
 
     .skills-heading {
