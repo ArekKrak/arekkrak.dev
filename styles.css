@@ -397,9 +397,9 @@ main .projects,
 
 .main-info,
 .about-info,
-.project-info,                              /* *********************** */
+.project-info,                              /* ******************* */
 .projects-container,                        /* BORDER-RADIUS: 2REM */
-.contact-info,                              /* *********************** */
+.contact-info,                              /* ******************* */
 main .projects,
 main .skills,
 footer .equalizer {
@@ -414,10 +414,26 @@ footer .equalizer {
     padding: 20px;
 }
 
+/* =========================== */
+/* GLOBAL FONT WEIGHT PROPERTY */
+/* =========================== */
+
+.main-info .gradient,
+.about-info .gradient,
+.about-info .page-heading,
+.project-info .page-heading,
+.contact-heading,                           /* **************** */
+.contact-method,                            /* FONT-WEIGHT: 600 */
+.about-title,                               /* **************** */
+.skill-title,
+.project-title,
+.clarify {
+    font-weight: 600;
+}
+
 .main-info .gradient,
 .about-info .gradient {
     font-size: 4.5rem;
-    font-weight: 600;
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9, #000000, #2278e9);
     background-clip: text;
     -webkit-background-clip: text;
@@ -463,7 +479,6 @@ a.contact-method {
 .project-info .page-heading,
 .contact-heading {
     font-size: 4.5rem;
-    font-weight: 600;
     line-height: normal;
 }
 
@@ -477,7 +492,6 @@ a.contact-method {
 
 .contact-method {
     font-size: 1.4rem;
-    font-weight: 600;
     margin-top: 30px;
 }
 
@@ -531,7 +545,6 @@ a.contact-method {
 .about-title {
     justify-content: flex-start;
     font-size: 1.4rem;
-    font-weight: 600;
     width: fit-content;
 }
 
@@ -718,7 +731,6 @@ main .skills {
 .project-title,
 .clarify {
     font-size: 1.3rem;
-    font-weight: 600;
 }
 
 .clarify {
