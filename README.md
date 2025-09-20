@@ -10,22 +10,26 @@ A responsive website built as a kanban project — part of a broader Full-Stack 
 
 This portfolio website showcases my profile, goals, and projects as a full-stack developer in training, featuring:
 
-- A home page with an AI generated image, a medieval version of myself gradually turning into my original, modern version of myself upon hover or click - a JavaScript functionality
-- An "About Me" page where I introduce myself and present programming technologies I'm familiar with
-- Visuals, CTA buttons, and layout that adapts seamlessly to screen size
+- A home page showing an AI generated image of a portrait, a medieval version of myself gradually crossfading into my original, modern version of myself upon hover or click - a JavaScript functionality demonstrated. The medieval version of myself will be replaced one day with a more professional version, as I currently consider it a fancy feature of my website, part of the project from my course
+- An "About Me" page where I introduced myself and presented programming technologies I'm familiar with
+- A "Projects" page showcasing my most compelling (so far) projects
+- A contact page where you can use one of the options available to get in touch with me
+- JavaScript functionality like the-already-mentioned image crossfade style, dark/light mode, and the rotating background
+
+I designate this Portfolio website as Vol. 1, as it will be evolving over time and more projects will be added.
 
 ---
 
 ## Project Overview
 
-This project was the culmination of a front-end development module, focused on HTML5 and CSS3 responsive design principles. It required the practical application of:
+This project was the consolidation of my learning, focused on HTML5, CSS3 responsive design principles, and JavaScript functionality. It required the practical application of:
 
-- Media queries
-- Relative units (`em`, `rem`, `%`)
-- Fluid image resizing
-- Flexbox layout and positioning
+- HTML & CSS
+- At least one interactive feature using JavaScript
+- Git version control
+- The command line and file navigation
 
-The project brief came from the Codecademy **Responsive Club Website** challenge project. It was open-ended, emphasizing creative decision-making, real-world layout planning, and problem solving.
+The project brief came from the Codecademy **Portfolio Website** kanban project. It was open-ended, emphasizing creative decision-making, real-world layout planning, and problem solving.
 
 ---
 
@@ -33,7 +37,8 @@ The project brief came from the Codecademy **Responsive Club Website** challenge
 
 - **HTML5**
 - **CSS3**
-- **Fonts**: Google Fonts – [Urbanist](https://fonts.google.com/specimen/Urbanist)
+- **JavaScript**
+- **Fonts**: Google Fonts – [Urbanist](https://fonts.google.com/specimen/Lato)
 - **Tools**: Visual Studio Code, Git, GitHub
 
 ---
@@ -41,24 +46,32 @@ The project brief came from the Codecademy **Responsive Club Website** challenge
 ## Project Structure
 
 ```
-go-ride/
-├── index.html
-├── styles.css
-├── form.html
-├── form.css
-├── img/
-│   ├── cycling-banner.jpeg
-│   ├── cycle1.jpg
-│   ├── cycle2.jpg
-│   ├── phone.svg
+arek-portfolio-website/
+├── index.html                  # Main HTML file
+├── about.html                  # Aboute HTML file
+├── projects.html               # Projects HTML file
+├── contact.html                # Contact HTML file
+├── styles.css                  # CSS Stylesheet
+├── cypher-demo.html            # Terminal Session Demo HTML file
+├── mixed-messages-demo.html    # Terminal Session Demo HTML file
+├── styles-demo.css             # Demo CSS Stylesheet
+├── main.js                     # JavaScript file
+├── img/                        # Images and logos
+│   ├── about-me.svg
+│   ├── about-profile-pic.jpg
+│   ├── back-arrow.svg
+│   ├── background-dark.svg
 │   └── ...etc
+├── vid/                        # Videos
+│   ├── cypher.mp4
+│   └── mixed-messages.mp4
 └── README.md
 ```
 
 ---
 
 ## Live Site
-**[View the Live Project](https://arekkrak.github.io/go-ride/)**
+**[View the Live Project](#not_yet_live)**
 
 ---
 
@@ -66,27 +79,26 @@ go-ride/
 
 - Responsive design using `@media` queries
 - Semantic HTML structure
-- Use of `flexbox` for layout control
+- Use of `flexbox` and `grids` for layout control
 - Accessibility-conscious markup
 - Scalable images with responsive sizing techniques
-- Custom pseudo-class styling for icon placement
+- JavaScript functions for website's animation
 
 ---
 
 ## Future Improvements
 
-This project serves as a front-end milestone and can be further expanded by:
+This project serves as a front-end milestone and will be further expanded by:
 
-- Adding interactivity with JavaScript
-- Integrating contact form functionality
-- Migrating layout to CSS Grid for more complex arrangements
+- Adding more interactivity with JavaScript
+- Adding more projects and deleting old ones
+- Updating the website styles
 
 ---
 
 ## Acknowledgements
 
-- Images sourced from [Unsplash](https://unsplash.com)
-- Layout and structure inspired by Codecademy's Responsive Design curriculum
+- Icons and backgrounds sourced from [SVG Repo](https://www.svgrepo.com/) and [SVG backgrounds](https://www.svgbackgrounds.com/)
 
 ---
 
