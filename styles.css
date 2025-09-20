@@ -25,6 +25,13 @@ body, html {
     min-height: 100%;
 }
 
+body,
+main .projects,
+main .skills,
+.contact-element {
+    position: relative;
+}
+
 body {
     font-family: "Lato", monospace;
     font-size: 16px;
@@ -205,8 +212,47 @@ nav {
     z-index: 1;
 }
 
-nav .nav {
+/* ======================= */
+/* FLEX DIRECTION PROPERTY */
+/* ======================= */
+
+nav .nav,
+.main-info,
+.about-info,
+.project-info,
+.projects-container,                        /* ********************** */
+.contact-info,                              /* FLEX-DIRECTION: COLUMN */
+.contact-content,                           /* ********************** */
+.about-section,
+main .projects,
+main .skills,
+.skill-item {
     flex-direction: column;
+}
+
+/* ======================== */
+/* JUSTIFY-CONTENT PROPERTY */
+/* ======================== */
+
+nav .nav,
+.about-container,
+.intro-container,
+.contact-container,
+.contact-main,
+#projects,
+.about-info .page-heading,
+.project-info .page-heading,
+.contact-heading,                           /* *********************** */
+.contact-content,                           /* JUSTIFY-CONTENT: CENTER */
+.page-intro,                                /* *********************** */
+.pic-container,
+.socials,
+main .projects,
+.skills-heading,
+.skills-subheading,
+.skills-container,
+.skills-grid,
+.button {
     justify-content: center;
 }
 
@@ -233,7 +279,6 @@ nav .nav {
 .intro-container,
 .contact-container {
     width: 100%;
-    justify-content: center;
 }
 
 .info,
@@ -242,13 +287,11 @@ nav .nav {
 }
 
 .contact-main {
-    justify-content: center;
     width: 100%;
     height: 100%;
 }
 
 #projects {
-    justify-content: center;
     width: 100%;
 }
 
@@ -289,7 +332,6 @@ nav .nav {
 .main-info,
 .about-info {
     align-items: flex-start;
-    flex-direction: column;
     padding: 20px;
     border-radius: 2rem;
 }
@@ -298,7 +340,6 @@ nav .nav {
 .projects-container,
 .contact-info {
     align-items: flex-start;
-    flex-direction: column;
     padding: 20px;
     border-radius: 2rem;
 }
@@ -351,7 +392,6 @@ a.contact-method {
 .about-info .page-heading,
 .project-info .page-heading,
 .contact-heading {
-    justify-content: center;
     width: 100%;
     font-size: 4.5rem;
     font-weight: 600;
@@ -363,8 +403,6 @@ a.contact-method {
 }
 
 .contact-content {
-    flex-direction: column;
-    justify-content: center;
     width: 100%;
 }
 
@@ -382,12 +420,10 @@ a.contact-method {
     width: 100%;
     padding-top: 10px;
     font-size: 1.2rem;
-    justify-content: center;
 }
 
 .pic-container {
     width: 100%;
-    justify-content: center;
 }
 
 .profile-picture {
@@ -403,7 +439,6 @@ a.contact-method {
 }
 
 .about-section {
-    flex-direction: column;
     padding: 10px;
 }
 
@@ -446,7 +481,6 @@ a.contact-method {
 }
 
 .socials {
-    justify-content: center;
     width: 100%;
 }
 
@@ -493,7 +527,7 @@ a.contact-method {
 }
 
 /* Container - the whole portrait block */
-.main-image{
+.main-image {
     display: flex;               /* center content inside */
     justify-content: center;
     align-items: center;
@@ -511,7 +545,7 @@ a.contact-method {
 }
 
 /* Images - front & back */
-.main-image img{
+.main-image img {
     max-width: 100%;
     cursor: pointer;
     height: auto;
@@ -597,7 +631,6 @@ main .skills {
 
 main .projects {
     align-items: flex-start;
-    justify-content: center;
     margin-left: 15%;
     width: 45%;
 }
@@ -608,34 +641,23 @@ main .skills {
 
 main .projects,
 main .skills {
-    flex-direction: column;
     padding: 20px;
     border-radius: 2rem;
 }
 
-body,
-main .projects,
-main .skills,
-.contact-element {
-    position: relative;
-}
-
 .skills-heading {
     width: 100%;
-    justify-content: center;
     font-size: 1.5rem;
 }
 
 .skills-subheading {
     width: 100%;
-    justify-content: center;
     font-size: 1.4rem;
     font-weight: 550;
     padding: 10px;
 }
 
 .skills-container {
-    justify-content: center;
     padding: 10px;
     width: 100%;
 }
@@ -643,11 +665,9 @@ main .skills,
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
 }
 
 .skill-item {
-    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: 150px;
@@ -739,7 +759,6 @@ main .skills,
 
 .button {
     flex-direction: row;
-    justify-content: center;
     cursor: pointer;
     vertical-align: middle;
     width: 8rem;
