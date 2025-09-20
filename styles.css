@@ -431,6 +431,20 @@ footer .equalizer {
     font-weight: 600;
 }
 
+/* =========================== */
+/* GLOBAL LINE HEIGHT PROPERTY */
+/* =========================== */
+
+.main-info .gradient,
+.about-info .gradient,
+.contact-method .gradient,                  /* ******************* */
+.contact-method:hover .gradient,            /* LINE-HEIGHT: NORMAL */
+.about-info .page-heading,                  /* ******************* */
+.project-info .page-heading,
+.contact-heading {
+    line-height: normal;
+}
+
 .main-info .gradient,
 .about-info .gradient {
     font-size: 4.5rem;
@@ -439,7 +453,6 @@ footer .equalizer {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    line-height: normal;
 }
 
 .contact-element {
@@ -453,7 +466,6 @@ a.contact-method {
 
 .contact-method .gradient {
     color: #000;
-    line-height: normal;
 }
 
 .contact-method:hover .gradient {
@@ -462,7 +474,6 @@ a.contact-method {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    line-height: normal;
 }
 
 .main-info h2 {
@@ -479,7 +490,6 @@ a.contact-method {
 .project-info .page-heading,
 .contact-heading {
     font-size: 4.5rem;
-    line-height: normal;
 }
 
 .contact-heading {
