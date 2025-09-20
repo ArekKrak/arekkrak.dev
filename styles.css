@@ -481,9 +481,19 @@ a.contact-method {
     font-weight: 400;
 }
 
+/* ========================= */
+/* GLOBAL FONT SIZE PROPERTY */
+/* ========================= */
+
+.main-info span,                            /* ***************** */
+.contact-method,                            /* FONT-SIZE: 1.4REM */
+.about-title,                               /* ***************** */
+.skills-subheading {
+    font-size: 1.4rem;
+}
+
 .main-info span {
     margin: 2.5rem 0;
-    font-size: 1.4rem;
 }
 
 .about-info .page-heading,
@@ -501,7 +511,6 @@ a.contact-method {
 }
 
 .contact-method {
-    font-size: 1.4rem;
     margin-top: 30px;
 }
 
@@ -554,7 +563,6 @@ a.contact-method {
 
 .about-title {
     justify-content: flex-start;
-    font-size: 1.4rem;
     width: fit-content;
 }
 
@@ -711,7 +719,6 @@ main .skills {
 }
 
 .skills-subheading {
-    font-size: 1.4rem;
     font-weight: 550;
     padding: 10px;
 }
