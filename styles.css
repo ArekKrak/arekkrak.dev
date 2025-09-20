@@ -97,9 +97,15 @@ footer .equalizer {
     display: flex;
 }
 
+header,
+.about-info,
+main,
+footer {
+    justify-content: space-around;
+}
+
 header {
     margin-top: 8%;
-    justify-content: space-around;
     align-items: center;
     max-width: 100%;
     overflow-x: clip;
@@ -174,7 +180,6 @@ nav .nav {
 }
 
 .about-info {
-    justify-content: space-around;
     width: 50%;
 }
 
@@ -512,7 +517,6 @@ a.contact-method {
 }
 
 main {
-    justify-content: space-around;
     align-items: center;
     max-width: 100%;
     margin-top: 3rem;
@@ -749,7 +753,6 @@ main .skills,
 }
 
 footer {
-    justify-content: space-around;
     align-items: center;
     max-width: 100%;
     margin-bottom: 2rem;
