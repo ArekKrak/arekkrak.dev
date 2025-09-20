@@ -103,9 +103,9 @@ footer .equalizer {
 /* ================== */
 
 header,
-.about-info,
-main,
-footer {
+.about-info,                                /* ***************************** */
+main,                                       /* JUSTIFY-CONTENT: SPACE-AROUND */
+footer {                                    /* ***************************** */
     justify-content: space-around;
 }
 
