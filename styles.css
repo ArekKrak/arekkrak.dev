@@ -164,6 +164,37 @@ header {
     margin-bottom: 12rem;
 }
 
+/* ============================= */
+/* GLOBAL BORDER RADIUS PROPERTY */
+/* ============================= */
+
+nav,
+.nav .active svg,
+.nav .inactive svg:hover,
+.linkedin svg,                              /* ******************** */
+.linkedin svg:hover,                        /* BORDER-RADIUS: .5REM */
+.github svg,                                /* ******************** */
+.button,
+.button:hover {
+    border-radius: .5rem;
+}
+
+/* ========================== */
+/* GLOBAL BACKGROUND PROPERTY */
+/* ========================== */
+
+nav,
+.main-info,
+.about-info,
+.project-info,                              /* ************************************ */
+.projects-container,                        /* BACKGROUND-COLOR: RGB(174, 254, 174) */
+.contact-info,                              /* ************************************ */
+main .projects,
+main .skills,
+footer .equalizer {
+    background-color: rgb(174, 254, 174);
+}
+
 nav {
     left: 0;
     bottom: 50%;
@@ -172,8 +203,6 @@ nav {
     margin-left: 1rem;
     transform: translateY(50%);
     z-index: 1;
-    border-radius: .5rem;
-    background-color: rgb(174, 254, 174);
 }
 
 nav .nav {
@@ -191,13 +220,11 @@ nav .nav {
 }
 
 .nav .active svg {
-    border-radius: .5rem;
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
     color: rgb(255, 255, 255);
 }
 
 .nav .inactive svg:hover {
-    border-radius: .5rem;
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
     color: rgb(255, 255, 255);
 }
@@ -263,7 +290,6 @@ nav .nav {
 .about-info {
     align-items: flex-start;
     flex-direction: column;
-    background-color: rgb(174, 254, 174);
     padding: 20px;
     border-radius: 2rem;
 }
@@ -273,7 +299,6 @@ nav .nav {
 .contact-info {
     align-items: flex-start;
     flex-direction: column;
-    background-color: rgb(174, 254, 174);
     padding: 20px;
     border-radius: 2rem;
 }
@@ -431,14 +456,12 @@ a.contact-method {
 
 .linkedin svg {
     padding: 5px;
-    border-radius: .5rem;
     background-color: transparent;
     color: rgb(0, 0, 0);
 }
 
 .linkedin svg:hover {
     padding: 5px;
-    border-radius: .5rem;
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
     color: rgb(255, 255, 255);
 }
@@ -449,7 +472,6 @@ a.contact-method {
 
 .github svg {
     padding: 10px;
-    border-radius: .5rem;
     background-color: transparent;
     color: rgb(0, 0, 0);
 }
@@ -587,7 +609,6 @@ main .skills {
 main .projects,
 main .skills {
     flex-direction: column;
-    background-color: rgb(174, 254, 174);
     padding: 20px;
     border-radius: 2rem;
 }
@@ -724,7 +745,6 @@ main .skills,
     width: 8rem;
     margin: 10px;
     background-color: #2278e9;
-    border-radius: .5rem;
 }
 
 .button a {
@@ -741,7 +761,6 @@ main .skills,
 }
 
 .button:hover {
-    border-radius: .5rem;
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
 }
 
@@ -787,7 +806,6 @@ footer .equalizer {
     height: fit-content;
     padding: 10px;
     width: 788px;
-    background-color: rgb(174, 254, 174);
     border-radius: 2rem;
 }
 
