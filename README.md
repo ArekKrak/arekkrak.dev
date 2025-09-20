@@ -1,4 +1,4 @@
-# Static Portfolio Website
+# Portfolio Website (Vol. 1)
 
 ![HTML5](https://img.shields.io/badge/HTML5-Markup-E34F26?logo=html5&logoColor=white&style=flat)
 ![CSS3](https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white&style=flat)
@@ -6,40 +6,53 @@
 ![VS Code](https://img.shields.io/badge/VS_Code-Editor-007ACC?logo=visualstudiocode&logoColor=white&style=flat)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white&style=flat)](https://github.com/ArekKrak/go-ride)
 
-A responsive website built as a kanban project — part of a broader Full-Stack Web Development programme.
+This portfolio site was built as part of the Codecademy *Full-Stack Web Development* path (**Portfolio Website project**).  
 
-This portfolio website showcases my profile, goals, and projects as a full-stack developer in training, featuring:
+**Course Brief (summary):**  
+Create a static portfolio website with multiple pages, styled using HTML & CSS, and at least one interactive JavaScript feature. Deploy via GitHub Pages (optional custom domain).
 
-- A home page showing an AI generated image of a portrait, a medieval version of myself gradually crossfading into my original, modern version of myself upon hover or click - a JavaScript functionality demonstrated. The medieval version of myself will be replaced one day with a more professional version, as I currently consider it a fancy feature of my website, part of the project from my course
-- An "About Me" page where I introduced myself and presented programming technologies I'm familiar with
-- A "Projects" page showcasing my most compelling (so far) projects
-- A contact page where you can use one of the options available to get in touch with me
-- JavaScript functionality like the-already-mentioned image crossfade style, dark/light mode, and the rotating background
+## Overview
 
-I designate this Portfolio website as Vol. 1, as it will be evolving over time and more projects will be added.
+A responsive, accessible personal portfolio built as part of a full-stack web development path. It showcases projects, a short bio, and contact options, with a little flair (theme toggle, rotating SVG background, and a portrait crossfade effect).
+
+   **Status:** v1 complete. Iterating as I add new projects.
 
 ---
 
-## Project Overview
+## What's Inside
 
-This project was the consolidation of my learning, focused on HTML5, CSS3 responsive design principles, and JavaScript functionality. It required the practical application of:
+- **Home** — Name, role, social links, and an **interactive portrait:** a medieval-style image crossfades to a modern photo on hover/click.
+- **About** — Short introduction and a list of technologies I use.
+- **Projects** — Links to my highlighted work.
+- **Contact** — Email, GitHub, and LinkedIn; icons/text share a unified **animated black-blue gradient** on hover.
 
-- HTML & CSS
-- At least one interactive feature using JavaScript
-- Git version control
-- The command line and file navigation
+I consider this Portfolio Website **Vol. 1** — it will evolve as my skills and projects grow.
 
-The project brief came from the Codecademy **Portfolio Website** kanban project. It was open-ended, emphasizing creative decision-making, real-world layout planning, and problem solving.
+---
+
+## Interactive Features (JS)
+
+- **Portrait crossfade** (hover/click toggle).
+- **Theme toggle** (light/dark) with ```localStorage``` persistence.
+- **Rotating, full-viewport SVG background** that respects ```prefers-reduced-motion```.
 
 ---
 
 ## Tech Stack
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **Fonts**: Google Fonts – [Urbanist](https://fonts.google.com/specimen/Lato)
-- **Tools**: Visual Studio Code, Git, GitHub
+- **HTML5** - semantic structure.
+- **CSS3** - responsive layout with Flexbox/Grid and custom gradients.
+- **JavaScript** - DOM interactions, animation, theme state, accessibility niceties.
+- **Fonts**: Google Fonts – [Lato](https://fonts.google.com/specimen/Lato)
+
+---
+
+## Accessibility
+
+- Semantic landmarks and descriptive link text.
+- Visible focusable controls (e.g., theme toggle button).
+- **Reduced motion** respected (rotating background pauses for users with ```prefers-reduced-motion: reduce```).
+- SVG icons use ```currentColor``` and are paired with accessible link text.
 
 ---
 
@@ -47,22 +60,22 @@ The project brief came from the Codecademy **Portfolio Website** kanban project.
 
 ```
 arek-portfolio-website/
-├── index.html                  # Main HTML file
-├── about.html                  # Aboute HTML file
-├── projects.html               # Projects HTML file
-├── contact.html                # Contact HTML file
-├── styles.css                  # CSS Stylesheet
-├── cypher-demo.html            # Terminal Session Demo HTML file
-├── mixed-messages-demo.html    # Terminal Session Demo HTML file
-├── styles-demo.css             # Demo CSS Stylesheet
-├── main.js                     # JavaScript file
-├── img/                        # Images and logos
+├── index.html                  # Home
+├── about.html                  # Aboute
+├── projects.html               # Projects
+├── contact.html                # Contact
+├── styles.css                  # Global styles
+├── main.js                     # Interactivity (portrait, theme, background)
+├── cypher-demo.html            # Demo page
+├── mixed-messages-demo.html    # Demo page
+├── styles-demo.css             # Demo styles
+├── img/                        # Images and SVGs
 │   ├── about-me.svg
 │   ├── about-profile-pic.jpg
 │   ├── back-arrow.svg
 │   ├── background-dark.svg
 │   └── ...etc
-├── vid/                        # Videos
+├── vid/                        # Project demo videos
 │   ├── cypher.mp4
 │   └── mixed-messages.mp4
 └── README.md                   # Project documentation
@@ -77,12 +90,12 @@ arek-portfolio-website/
 
 ## Key Concepts Demonstrated
 
-- Responsive design using `@media` queries
-- Semantic HTML structure
-- Use of `flexbox` and `grids` for layout control
-- Accessibility-conscious markup
-- Scalable images with responsive sizing techniques
-- JavaScript functions for website's animation
+- Responsive design with `@media` queries
+- Flexbox & CSS Grid for layout.
+- SVG with gradient fills synchronized with text gradients.
+- Accessibility patterns (reduced motion, semantics).
+- Local development workflow + Git/GitHub.
+- Static hosting via GitHub Pages (custom domain ready).
 
 ---
 
@@ -90,15 +103,19 @@ arek-portfolio-website/
 
 This project serves as a front-end milestone and will be further expanded by:
 
-- Adding more interactivity with JavaScript
-- Adding more projects and deleting old ones
-- Updating the website styles
+ - Add more projects & remove older ones as I progress.
+ - Improve image assets (replace medieval portrait with a professional one).
+ - Expand JavaScript interactivity (project filters, animations with motion-safe fallbacks).
+ - Add Lighthouse CI badge + automated checks.
+ - Polish mobile nav micro-interactions.
 
 ---
 
 ## Acknowledgements
 
-- Icons and backgrounds sourced from [SVG Repo](https://www.svgrepo.com/) and [SVG backgrounds](https://www.svgbackgrounds.com/)
+- Icons: [SVG Repo](https://www.svgrepo.com/)
+- Backgrounds: [SVG backgrounds](https://www.svgbackgrounds.com/)
+- Fonts: [Google Fonts](https://fonts.google.com/specimen/Lato)
 
 ---
 
