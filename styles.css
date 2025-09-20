@@ -748,8 +748,17 @@ main .skills {
     font-weight: 550;
 }
 
-.skills-grid {
+/* ====================== */
+/* GLOBAL GRID CONTAINERS */
+/* ====================== */
+
+.skills-grid,                               /* ************* */
+.item-grid,                                 /* DISPLAY: GRID */
+.projects-grid {                            /* ************* */
     display: grid;
+}
+
+.skills-grid {
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -786,7 +795,6 @@ main .skills {
 }
 
 .item-grid {
-    display: grid;
     grid-template-rows: auto 1fr;
     margin: 0 auto;
 }
@@ -808,7 +816,6 @@ main .skills {
 }
 
 .projects-grid {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
