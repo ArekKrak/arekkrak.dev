@@ -544,7 +544,20 @@ a.contact-method {
     border: 2px solid rgb(34, 120, 233);
 }
 
-.about-section {
+/* ======================= */
+/* GLOBAL PADDING PROPERTY */
+/* ======================= */
+
+.about-section,
+.github svg,
+.github svg:hover,
+.skills-subheading,                         /* ************* */
+.skills-container,                          /* PADDING: 10PX */
+.skill-item,                                /* ************* */
+.item-grid,
+.project-details,
+footer .equalizer,
+.copyright {
     padding: 10px;
 }
 
@@ -601,12 +614,10 @@ a.contact-method {
 }
 
 .github svg {
-    padding: 10px;
     background-color: transparent;
 }
 
 .github svg:hover {
-    padding: 10px;
     border-radius: 5rem;
 }
 
@@ -732,11 +743,6 @@ main .skills {
 
 .skills-subheading {
     font-weight: 550;
-    padding: 10px;
-}
-
-.skills-container {
-    padding: 10px;
 }
 
 .skills-grid {
@@ -748,7 +754,6 @@ main .skills {
     justify-content: flex-start;
     height: 150px;
     width: 220px;
-    padding: 10px;
 }
 
 .skill-subitem {
@@ -781,7 +786,6 @@ main .skills {
 
 .item-grid {
     display: grid;
-    padding: 10px;
     grid-template-rows: auto 1fr;
     margin: 0 auto;
 }
@@ -809,7 +813,6 @@ main .skills {
 
 .project-details {
     margin: 5px;
-    padding: 10px;
 }
 
 .project-badges {
@@ -881,12 +884,7 @@ footer {
 
 footer .equalizer {
     height: fit-content;
-    padding: 10px;
     width: 788px;
-}
-
-.copyright {
-    padding: 10px;
 }
 
 @media only screen and (max-width: 1375px) {
