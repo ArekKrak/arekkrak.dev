@@ -1187,7 +1187,9 @@ footer .equalizer {
         width: 90%;
     }
 
-    .about-text {
+    .about-text,
+    .main-info span,
+    .skills-subheading {
         font-size: 1.3rem;
     }
 
@@ -1203,10 +1205,6 @@ footer .equalizer {
     .main-info h2 {
         font-size: 1.7rem;
         margin: 0 auto;
-    }
-
-    .main-info span {
-        font-size: 1.3rem;
     }
 
     .profile-picture {
@@ -1310,7 +1308,6 @@ footer .equalizer {
     }
 
     .skills-subheading {
-        font-size: 1.3rem;
         padding: 10px 0;
     }
 
