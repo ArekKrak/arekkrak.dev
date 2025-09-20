@@ -587,8 +587,18 @@ footer .equalizer,
     color: rgb(34, 120, 233);
 }
 
-.about-title {
+/* =============================== */
+/* GLOBAL JUSTIFY-CONTENT PROPERTY */
+/* =============================== */
+
+.about-title,                               /* *************************** */
+main .equalizer,                            /* JUSTIFY-CONTENT: FLEX-START */
+.skill-item,                                /* *************************** */
+.skill-subitem {
     justify-content: flex-start;
+}
+
+.about-title {
     width: fit-content;
 }
 
@@ -719,10 +729,6 @@ main {
     margin-bottom: 18rem;
 }
 
-main .equalizer {
-    justify-content: flex-start;
-}
-
 main .projects {
     margin-left: 15%;
     width: 45%;
@@ -751,13 +757,11 @@ main .skills {
 }
 
 .skill-item {
-    justify-content: flex-start;
     height: 150px;
     width: 220px;
 }
 
 .skill-subitem {
-    justify-content: flex-start;
     padding: 5px 0;
 }
 
