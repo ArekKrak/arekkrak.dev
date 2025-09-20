@@ -799,13 +799,21 @@ main .skills {
     margin: 0 auto;
 }
 
-.item-image {
-    width: 95%;
+/* ====================== */
+/* GLOBAL HEIGHT PROPERTY */
+/* ====================== */
+
+.item-image,                                /* ************ */
+.item-image img,                            /* HEIGHT: AUTO */
+.button a {                                 /* ************ */
     height: auto;
 }
 
+.item-image {
+    width: 95%;
+}
+
 .item-image img {
-    height: auto;
     border-radius: 1.7rem;
     border: 2px solid rgb(219, 219, 219);
     transition: 1s ease-in-out;
@@ -849,7 +857,6 @@ main .skills {
 
 .button a {
     flex-direction: row;
-    height: auto;
     width: auto;
 }
 
