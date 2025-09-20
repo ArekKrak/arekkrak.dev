@@ -391,17 +391,27 @@ main .projects,
     align-items: flex-start;
 }
 
+/* ============================= */
+/* GLOBAL BORDER RADIUS PROPERTY */
+/* ============================= */
+
 .main-info,
-.about-info {
-    padding: 20px;
+.about-info,
+.project-info,                              /* *********************** */
+.projects-container,                        /* BORDER-RADIUS: 2REM */
+.contact-info,                              /* *********************** */
+main .projects,
+main .skills,
+footer .equalizer {
     border-radius: 2rem;
 }
 
+.main-info,
+.about-info,
 .project-info,
 .projects-container,
 .contact-info {
     padding: 20px;
-    border-radius: 2rem;
 }
 
 .main-info .gradient,
@@ -671,7 +681,6 @@ main .skills {
 main .projects,
 main .skills {
     padding: 20px;
-    border-radius: 2rem;
 }
 
 .skills-heading {
@@ -838,7 +847,6 @@ footer .equalizer {
     height: fit-content;
     padding: 10px;
     width: 788px;
-    border-radius: 2rem;
 }
 
 .copyright {
