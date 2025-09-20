@@ -1136,11 +1136,10 @@ footer .equalizer {
         margin: 1rem;
     }
 
-    .linkedin svg:hover {
-        background: none;
-    }
-
-    .github svg:hover {
+    .linkedin svg:hover,
+    .github svg:hover,
+    .nav a.active svg,
+    .nav .inactive svg:hover {
         background: none;
     }
 
@@ -1162,13 +1161,11 @@ footer .equalizer {
     }
 
     .nav a.active svg {
-        background: none;
         color: rgb(255, 255, 255);
     }
 
     .nav .inactive svg:hover {
         border-radius: none;
-        background: none;
     }
 
     .info {
