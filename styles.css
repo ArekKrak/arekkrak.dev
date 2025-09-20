@@ -841,13 +841,21 @@ main .skills {
     vertical-align: middle;
 }
 
-.grid-buttons {
-    height: 4rem;
+/* ============================== */
+/* GLOBAL FLEX DIRECTION PROPERTY */
+/* ============================== */
+
+.grid-buttons,                              /* ******************* */
+.button,                                    /* FLEX-DIRECTION: ROW */
+.button a {                                 /* ******************* */
     flex-direction: row;
 }
 
+.grid-buttons {
+    height: 4rem;
+}
+
 .button {
-    flex-direction: row;
     cursor: pointer;
     vertical-align: middle;
     width: 8rem;
@@ -856,7 +864,6 @@ main .skills {
 }
 
 .button a {
-    flex-direction: row;
     width: auto;
 }
 
