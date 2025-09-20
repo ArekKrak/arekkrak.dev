@@ -292,11 +292,15 @@ main .projects,
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
 }
 
-.nav .active svg {
-    color: rgb(255, 255, 255);
-}
+/* ===================== */
+/* GLOBAL COLOR PROPERTY */
+/* ===================== */
 
-.nav .inactive svg:hover {
+.nav .active svg,
+.nav .inactive svg:hover,                   /* ************************* */
+.linkedin svg:hover,                        /* COLOR: RGB(255, 255, 255) */
+.github svg:hover,                          /* ************************* */
+.button:hover svg {
     color: rgb(255, 255, 255);
 }
 
@@ -520,7 +524,6 @@ a.contact-method {
 
 .linkedin svg:hover {
     padding: 5px;
-    color: rgb(255, 255, 255);
 }
 
 .github a {
@@ -535,7 +538,6 @@ a.contact-method {
 .github svg:hover {
     padding: 10px;
     border-radius: 5rem;
-    color: rgb(255, 255, 255);
 }
 
 /*  ===============================
@@ -797,10 +799,6 @@ main .skills {
     margin: 10px;
     width: 2.5rem;
     height: 2.5rem;
-}
-
-.button:hover svg {
-    color: rgb(255, 255, 255);
 }
 
 #projects-header h2 {
