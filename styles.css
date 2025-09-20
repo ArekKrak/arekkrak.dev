@@ -212,9 +212,9 @@ nav {
     z-index: 1;
 }
 
-/* ======================= */
-/* FLEX DIRECTION PROPERTY */
-/* ======================= */
+/* ============================== */
+/* GLOBAL FLEX DIRECTION PROPERTY */
+/* ============================== */
 
 nav .nav,
 .main-info,
@@ -230,9 +230,9 @@ main .skills,
     flex-direction: column;
 }
 
-/* ======================== */
-/* JUSTIFY-CONTENT PROPERTY */
-/* ======================== */
+/* =============================== */
+/* GLOBAL JUSTIFY-CONTENT PROPERTY */
+/* =============================== */
 
 nav .nav,
 .about-container,
@@ -260,18 +260,43 @@ main .projects,
     margin: 1rem 1.5rem;
 }
 
-.nav a svg {
-    padding: .5rem;
+/* ===================== */
+/* GLOBAL COLOR PROPERTY */
+/* ===================== */
+
+.nav a svg,
+.linkedin svg,
+.github svg,
+.button svg,                                /* ******************* */
+#projects-header,                           /* COLOR: RGB(0, 0, 0) */
+#portfolio-website,                         /* ******************* */
+#go-ride,
+#cypher-python,
+#mixed-messages {
     color: rgb(0, 0, 0);
 }
 
-.nav .active svg {
+.nav a svg {
+    padding: .5rem;
+}
+
+/* ========================== */
+/* GLOBAL BACKGROUND PROPERTY */
+/* ========================== */
+
+.nav .active svg,
+.nav .inactive svg:hover,                   /* *********************************************************************** */
+.linkedin svg:hover,                        /* BACKGROUND: LINEAR-GRADIENT(120DEG, #000000, #2278E9, #000000, #2278E9) */
+.github svg:hover,                          /* *********************************************************************** */
+.button:hover {
     background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+}
+
+.nav .active svg {
     color: rgb(255, 255, 255);
 }
 
 .nav .inactive svg:hover {
-    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
     color: rgb(255, 255, 255);
 }
 
@@ -491,12 +516,10 @@ a.contact-method {
 .linkedin svg {
     padding: 5px;
     background-color: transparent;
-    color: rgb(0, 0, 0);
 }
 
 .linkedin svg:hover {
     padding: 5px;
-    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
     color: rgb(255, 255, 255);
 }
 
@@ -507,13 +530,11 @@ a.contact-method {
 .github svg {
     padding: 10px;
     background-color: transparent;
-    color: rgb(0, 0, 0);
 }
 
 .github svg:hover {
     padding: 10px;
     border-radius: 5rem;
-    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
     color: rgb(255, 255, 255);
 }
 
@@ -773,14 +794,9 @@ main .skills {
 }
 
 .button svg {
-    color: rgb(0, 0, 0);
     margin: 10px;
     width: 2.5rem;
     height: 2.5rem;
-}
-
-.button:hover {
-    background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
 }
 
 .button:hover svg {
@@ -805,7 +821,6 @@ main .skills {
 #cypher-python,
 #mixed-messages {
     text-decoration: none;
-    color: rgb(0, 0, 0);
 }
 
 #projects-header:hover,
