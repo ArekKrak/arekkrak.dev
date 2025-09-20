@@ -610,13 +610,13 @@ main .equalizer,                            /* JUSTIFY-CONTENT: FLEX-START */
     margin-right: 10px;
 }
 
-.linkedin svg {
-    padding: 5px;
-    background-color: transparent;
-}
-
+.linkedin svg,
 .linkedin svg:hover {
     padding: 5px;
+}
+
+.linkedin svg {
+    background-color: transparent;
 }
 
 .github a {
