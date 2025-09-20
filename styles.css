@@ -338,7 +338,14 @@ footer .equalizer {                         /* ****************************** */
     justify-content: space-between;
 }
 
-.contact-main {
+/* ====================== */
+/* GLOBAL HEIGHT PROPERTY */
+/* ====================== */
+
+.contact-main,                              /* ************ */
+.info,                                      /* HEIGHT: 100% */
+main .equalizer,                            /* ************ */
+main .skills {
     height: 100%;
 }
 
@@ -357,10 +364,6 @@ footer .equalizer {                         /* ****************************** */
     cursor: pointer;
 }
 
-.info {
-    height: 100%;
-}
-
 .main-info {
     margin-left: 15%;
     width: 45%;
@@ -374,9 +377,22 @@ footer .equalizer {                         /* ****************************** */
     width: 40%
 }
 
+/* =========================== */
+/* GLOBAL ALIGN ITEMS PROPERTY */
+/* =========================== */
+
+.main-info,
+.about-info,
+.project-info,                              /* *********************** */
+.projects-container,                        /* ALIGN-ITEMS: FLEX-START */
+.contact-info,                              /* *********************** */
+main .projects,
+.skill-item {
+    align-items: flex-start;
+}
+
 .main-info,
 .about-info {
-    align-items: flex-start;
     padding: 20px;
     border-radius: 2rem;
 }
@@ -384,7 +400,6 @@ footer .equalizer {                         /* ****************************** */
 .project-info,
 .projects-container,
 .contact-info {
-    align-items: flex-start;
     padding: 20px;
     border-radius: 2rem;
 }
@@ -640,17 +655,11 @@ main {
     margin-bottom: 18rem;
 }
 
-main .equalizer,
-main .skills {
-    height: 100%;
-}
-
 main .equalizer {
     justify-content: flex-start;
 }
 
 main .projects {
-    align-items: flex-start;
     margin-left: 15%;
     width: 45%;
 }
@@ -686,7 +695,6 @@ main .skills {
 
 .skill-item {
     justify-content: flex-start;
-    align-items: flex-start;
     height: 150px;
     width: 220px;
     padding: 10px;
