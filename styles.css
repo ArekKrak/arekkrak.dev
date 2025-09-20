@@ -847,6 +847,24 @@ footer .equalizer {
         font-size: 1.2rem;
     }
 
+    .profile-picture:active {
+        border: 2px solid rgb(34, 120, 233);
+    }
+
+    .linkedin svg:active {
+        padding: 5px;
+        border-radius: .5rem;
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+        color: rgb(255, 255, 255);
+    }
+
+    .github svg:active {
+        padding: 10px;
+        border-radius: 5rem;
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+        color: rgb(255, 255, 255);
+    }
+
     .main-image {
         width: 30%;
         margin-right: 7%;
@@ -865,8 +883,21 @@ footer .equalizer {
         width: 100%;
     }
 
+    .item-image:active img {
+        border: 2px solid rgb(34, 120, 233);
+    }
+
     .grid-buttons {
         justify-content: center;
+    }
+
+    .button:active {
+        border-radius: .5rem;
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+    }
+
+    .button:active svg {
+        color: rgb(255, 255, 255);
     }
 
     main .projects {
@@ -880,6 +911,14 @@ footer .equalizer {
     #projects-header h2 {
         font-size: 1.4rem;
         margin-bottom: 1rem;
+    }
+
+    #projects-header:active,
+    #portfolio-website:active,
+    #go-ride:active,
+    #cypher-python:active,
+    #mixed-messages:active {
+        color: rgb(34, 120, 233);
     }
 
     #portfolio-website,
@@ -959,6 +998,19 @@ footer .equalizer {
         font-size: 1.3rem;
     }
 
+    .profile-picture {
+        transition: none;
+    }
+
+    .profile-picture:hover {
+        border: 2px solid rgb(219, 219, 219);
+    }
+
+    .profile-picture:active {
+        border: 2px solid rgb(34, 120, 233);
+        transition: 1s ease-in-out;
+    }
+
     .contact-info {
         width: 85%;
     }
@@ -972,6 +1024,19 @@ footer .equalizer {
         cursor: default;
     }
 
+    .item-image img {
+        transition: none;
+    }
+
+    .item-image:hover img {
+        border: 2px solid rgb(219, 219, 219);
+    }
+
+    .item-image:active img {
+        border: 2px solid rgb(34, 120, 233);
+        transition: 1s ease-in-out;
+    }
+
     .linkedin svg:hover {
         background: none;
         color: rgb(0, 0, 0);
@@ -980,6 +1045,38 @@ footer .equalizer {
     .github svg:hover {
         background: none;
         color: rgb(0, 0, 0);
+    }
+
+    .linkedin svg:active {
+        padding: 5px;
+        border-radius: .5rem;
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+        color: rgb(255, 255, 255);
+    }
+
+    .github svg:active {
+        padding: 10px;
+        border-radius: 5rem;
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+        color: rgb(255, 255, 255);
+    }
+
+    .button:hover {
+        border-radius: .5rem;
+        background: #2278e9;
+    }
+
+    .button:hover svg {
+        color: rgb(0, 0, 0);
+    }
+
+    .button:active {
+        border-radius: .5rem;
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+    }
+
+    .button:active svg {
+        color: rgb(255, 255, 255);
     }
 
     main .skills {
@@ -1024,10 +1121,19 @@ footer .equalizer {
     }
 
     #projects-header:hover,
+    #portfolio-website:hover,
     #go-ride:hover,
-    #card-checker:hover,
-    #mixed-messages:hover {
+    #mixed-messages:hover,
+    #cypher-python:hover {
         color: rgb(0, 0, 0);
+    }
+
+    #projects-header:active,
+    #portfolio-website:active,
+    #go-ride:active,
+    #mixed-messages:active,
+    #cypher-python:active {
+        color: rgb(34, 120, 233);
     }
 
     .skills-grid {
