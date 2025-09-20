@@ -65,7 +65,7 @@ arek-portfolio-website/
 ├── vid/                        # Videos
 │   ├── cypher.mp4
 │   └── mixed-messages.mp4
-└── README.md
+└── README.md                   # Project documentation
 ```
 
 ---
