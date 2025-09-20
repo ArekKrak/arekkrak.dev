@@ -1007,16 +1007,20 @@ footer .equalizer {
         background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
     }
 
+    .linkedin svg:active,
+    .github svg:active,
+    .button:active svg {
+        color: rgb(255, 255, 255);
+    }
+
     .linkedin svg:active {
         padding: 5px;
         border-radius: .5rem;
-        color: rgb(255, 255, 255);
     }
 
     .github svg:active {
         padding: 10px;
         border-radius: 5rem;
-        color: rgb(255, 255, 255);
     }
 
     .main-image {
@@ -1071,10 +1075,6 @@ footer .equalizer {
 
     .button:active {
         border-radius: .5rem;
-    }
-
-    .button:active svg {
-        color: rgb(255, 255, 255);
     }
 
     main .projects {
