@@ -965,7 +965,6 @@ footer .equalizer {
     }
 
     nav .nav {
-        display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
