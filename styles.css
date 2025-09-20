@@ -1136,9 +1136,28 @@ footer .equalizer {
         margin: 1rem;
     }
 
+    .linkedin svg:hover {
+        background: none;
+    }
+
+    .github svg:hover {
+        background: none;
+    }
+
+    .button:hover {
+        border-radius: .5rem;
+        background: #2278e9;
+    }
+
+    .nav a.active,
+    .linkedin svg:active,
+    .github svg:active,
+    .button:active {
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+    }
+
     .nav a.active {
         border-radius: 0;
-        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
         color: rgb(255, 255, 255);
     }
 
@@ -1226,25 +1245,15 @@ footer .equalizer {
         transition: 1s ease-in-out;
     }
 
-    .linkedin svg:hover {
-        background: none;
-    }
-
-    .github svg:hover {
-        background: none;
-    }
-
     .linkedin svg:active {
         padding: 5px;
         border-radius: .5rem;
-        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
         color: rgb(255, 255, 255);
     }
 
     .github svg:active {
         padding: 10px;
         border-radius: 5rem;
-        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
         color: rgb(255, 255, 255);
     }
 
@@ -1292,14 +1301,8 @@ footer .equalizer {
         stroke: transparent !important;
     }
 
-    .button:hover {
-        border-radius: .5rem;
-        background: #2278e9;
-    }
-
     .button:active {
         border-radius: .5rem;
-        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
     }
 
     .button:active svg {
