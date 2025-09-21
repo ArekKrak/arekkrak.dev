@@ -163,7 +163,7 @@ footer {
 }
 
 header {
-    margin-top: 8%;
+    margin-top: 2rem;
     overflow-x: clip;
 }
 
@@ -955,22 +955,36 @@ footer .equalizer {
     }
 }
 
+:root {
+    --nav-height: 5rem;
+}
+
 @media only screen and (max-width: 1250px) {
     nav {
-        bottom: 3rem;
+        bottom: 0;
         left: 0;
+        right: 0;
         position: fixed;
-        height: 7rem;
+        height: var(--nav-height);
         margin-left: 0;
         margin-bottom: 0;
-        transform: translateY(50%);
-        z-index: 1;
+        z-index: 9999;
         width: 100%;
         background-color: rgb(174, 254, 174);
+        transform: none;
     }
 
     nav .nav {
         flex-direction: row;
+    }
+
+    .nav a {
+        margin: .5rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    /* Reserve space for notches if present */
+    body {
+        padding-bottom: max(var(--nav-height), env(safe-area-inset-bottom));
     }
 
     .project-info,
@@ -1002,8 +1016,42 @@ footer .equalizer {
         font-size: 1.2rem;
     }
 
+    .profile-picture {
+        transition: 0s;
+    }
+
+    .profile-picture:hover {
+        border: 2px solid rgb(219, 219, 219);
+    }
+
     .profile-picture:active {
         border: 2px solid rgb(34, 120, 233);
+    }
+
+    .linkedin svg:hover,
+    .github svg:hover,
+    .button:hover svg,
+    #projects-header:hover,
+    #portfolio-website:hover,
+    #go-ride:hover,
+    #mixed-messages:hover,
+    #cypher-python:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    .linkedin svg:active,
+    .button:hover,
+    .button:active {
+        border-radius: .5rem;
+    }
+
+    .button:hover {
+        background: #2278e9;
+        border: 2px solid rgb(255, 255, 255);
+    }
+
+    .button:active {
+        border: 2px solid transparent;
     }
 
     .linkedin svg:active,
@@ -1018,9 +1066,24 @@ footer .equalizer {
         color: rgb(255, 255, 255);
     }
 
+    .linkedin svg:hover,
+    .github svg:hover {
+        background: none;
+    }
+
     .linkedin svg:active {
         padding: 5px;
         border-radius: .5rem;
+    }
+
+    .linkedin svg:active,
+    .github svg:active {
+        background: linear-gradient(120deg, #000000, #2278e9, #000000, #2278e9);
+    }
+
+    .linkedin svg:active,
+    .github svg:active {
+        color: rgb(255, 255, 255);
     }
 
     .github svg:active {
@@ -1070,6 +1133,14 @@ footer .equalizer {
         width: 100%;
     }
 
+    .item-image img {
+        transition: 0s;
+    }
+
+    .item-image:hover img {
+        border: 2px solid rgb(219, 219, 219);
+    }
+
     .item-image:active img {
         border: 2px solid rgb(34, 120, 233);
     }
@@ -1112,15 +1183,18 @@ footer .equalizer {
     }
 
     footer {
-        margin-bottom: 8rem;
+        margin-bottom: 0;
     }
 }
 
 @media only screen and (max-width: 675px) {
-    .nav a,
     .main-image,
     main .projects {
         margin: 0;
+    }
+
+    .nav a {
+        margin: 0 .5rem;
     }
 
     .nav a svg,
@@ -1138,7 +1212,7 @@ footer .equalizer {
 
     .nav a svg {
         padding: .5rem;
-        margin: 1rem;
+        margin: .6rem;
     }
 
     .project-info .page-heading {
