@@ -1226,6 +1226,10 @@ footer .equalizer {
         margin: 0 auto;
     }
 
+    .profile-picture {
+        transition: none;
+    }
+
     .profile-picture:hover {
         border: 2px solid rgb(219, 219, 219);
     }
@@ -1233,10 +1237,6 @@ footer .equalizer {
     .profile-picture:active {
         border: 2px solid rgb(34, 120, 233);
         /* transition: 1s ease-in-out; */
-    }
-
-    .profile-picture {
-        transition: none;
     }
 
     .contact-info {
