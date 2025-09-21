@@ -1141,6 +1141,10 @@ footer .equalizer {
         margin: 1rem;
     }
 
+    .project-info .page-heading {
+        font-size: 2rem;
+    }
+
     .linkedin svg:hover,
     .github svg:hover,
     .nav a.active svg,
