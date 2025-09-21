@@ -1251,7 +1251,7 @@ footer .equalizer {
     }
 
     .item-image img {
-        transition: none;
+        transition: 0s;
     }
 
     .item-image:hover img {
@@ -1260,7 +1260,6 @@ footer .equalizer {
 
     .item-image:active img {
         border: 2px solid rgb(34, 120, 233);
-        transition: 1s ease-in-out;
     }
 
     .linkedin svg:active {
