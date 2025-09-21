@@ -1226,9 +1226,9 @@ footer .equalizer {
         margin: 0 auto;
     }
 
-    .profile-picture {
+    /* .profile-picture {
         transition: 0s;
-    }
+    } */
 
     .profile-picture:hover {
         border: 2px solid rgb(219, 219, 219);
