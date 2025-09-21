@@ -1183,7 +1183,7 @@ footer .equalizer {
     }
 
     footer {
-        margin-bottom: 0;
+        margin-bottom: 1rem;
     }
 }
 
@@ -1430,6 +1430,10 @@ footer .equalizer {
 
     .skills-grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    footer {
+        margin-bottom: 1rem;
     }
 
     footer .equalizer {
