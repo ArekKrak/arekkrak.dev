@@ -955,7 +955,7 @@ footer .equalizer {
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1210px) {
     nav {
         bottom: 3rem;
         left: 0;
