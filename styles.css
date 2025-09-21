@@ -974,6 +974,7 @@ footer .equalizer {
         width: 100%;
         background-color: rgb(174, 254, 174);
         transform: none;
+        border-radius: .5rem .5rem 0 0;
     }
 
     nav .nav {
@@ -1213,6 +1214,10 @@ footer .equalizer {
     .main-image,
     main .projects {
         margin: 0;
+    }
+
+    nav {
+        border-radius: 0;
     }
 
     .nav a {
