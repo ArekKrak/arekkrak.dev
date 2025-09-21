@@ -1236,7 +1236,7 @@ footer .equalizer {
 
     .profile-picture:active {
         border: 2px solid rgb(34, 120, 233);
-        /* transition: 1s ease-in-out; */
+        transition: 0s;
     }
 
     .contact-info {
