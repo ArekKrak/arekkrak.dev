@@ -729,12 +729,16 @@ main {
 
 main .projects {
     margin-left: 15%;
-    width: 45%;
+    width: 46%;
 }
 
 main .skills {
     width: 50%;
 }
+
+/* main .projects {
+    padding: 20px 5px 20px 20px;
+} */
 
 main .projects,
 main .skills {
@@ -888,6 +892,7 @@ main .skills {
 #cypher-python,
 #mixed-messages {
     font-weight: 500;
+    margin-top: 1rem;
 }
 
 #projects-header,
@@ -896,6 +901,14 @@ main .skills {
 #cypher-python,
 #mixed-messages {
     text-decoration: none;
+}
+
+#portfolio-website span {
+    border-bottom: 2px solid black;
+}
+
+#portfolio-website:hover span {
+    border-bottom: 2px solid rgb(34, 120, 233);
 }
 
 #projects-header:hover,
@@ -954,6 +967,14 @@ footer .equalizer {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
         margin: 0 auto;
+    }
+
+    #portfolio-website,
+    #go-ride,
+    #cypher-python,
+    #mixed-messages {
+        font-size: 1.2rem;
+        margin-top: 1rem;
     }
 }
 
@@ -1040,6 +1061,10 @@ footer .equalizer {
     #mixed-messages:hover,
     #cypher-python:hover {
         color: rgb(0, 0, 0);
+    }
+
+    #portfolio-website:hover span {
+        border-bottom: 2px solid rgb(0, 0, 0);
     }
 
     .linkedin svg:active,
@@ -1195,6 +1220,10 @@ footer .equalizer {
     #cypher-python:active,
     #mixed-messages:active {
         color: rgb(34, 120, 233);
+    }
+
+    #portfolio-website:active span {
+        border-bottom: 2px solid rgb(34, 120, 233);
     }
 
     #portfolio-website,
