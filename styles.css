@@ -634,7 +634,8 @@ main .equalizer,                            /* JUSTIFY-CONTENT: FLEX-START */
 
 /* Define frame thickness in one place */
 :root {
-    --frame: 40px; 
+    --frame: 40px;
+    --overdraw: 1px;
 }
 
 /* Container - the whole portrait block */
@@ -648,7 +649,7 @@ main .equalizer,                            /* JUSTIFY-CONTENT: FLEX-START */
 
     /* Add padding equal the frame thickness:width:
         ensures images sit inside the frame instead of being covered by it */
-    padding: var(--frame);
+    padding: calc(var(--frame) - var(--overdraw));
     box-sizing: border-box;     /* padding and borders included in element size */
 
     /* Prevent images spilling outside if they misalign */
@@ -688,12 +689,12 @@ main .equalizer,                            /* JUSTIFY-CONTENT: FLEX-START */
 .main-image::after {
     content: "";
     position: absolute;
-    inset: 0;                        /* stretch to all edges of container */
+    inset: calc(-1 * var(--overdraw));                        /* stretch to all edges of container */
     pointer-events: none;            /* click pass through */
-    border: var(--frame) solid transparent; /* space for the frame image */
+    border-style: solid; /* space for the frame image */
+    border-width: calc(var(--frame) + var(--overdraw));
     border-image-source: url('img/frame.png'); /* draw the ornate frame */
     border-image-slice: 280;
-    border-image-width: var(--frame);
     border-image-repeat: stretch;
     box-sizing: border-box;          /* include border in box size */
     z-index: 2;                      /* always on top of both images */
