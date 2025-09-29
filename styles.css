@@ -691,7 +691,10 @@ main .equalizer,                            /* JUSTIFY-CONTENT: FLEX-START */
     inset: 0;                        /* stretch to all edges of container */
     pointer-events: none;            /* click pass through */
     border: var(--frame) solid transparent; /* space for the frame image */
-    border-image: url('img/frame.png') 280 round; /* draw the ornate frame */
+    border-image-source: url('img/frame.png'); /* draw the ornate frame */
+    border-image-slice: 280;
+    border-image-width: var(--frame);
+    border-image-repeat: stretch;
     box-sizing: border-box;          /* include border in box size */
     z-index: 2;                      /* always on top of both images */
 }
