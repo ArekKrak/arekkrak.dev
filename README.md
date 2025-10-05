@@ -84,7 +84,7 @@ arek-portfolio-website/
 ---
 
 ## Live Site
-**[View the Live Project](#not_yet_live)**
+**[View the Live Project](https://arekkrak.dev/)**
 
 ---
 
