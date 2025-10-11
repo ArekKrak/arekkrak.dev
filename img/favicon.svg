@@ -19,7 +19,9 @@
        width="135.46666"
        height="135.46666"
        x="2.7270507e-06"
-       y="2.7270507e-06" />
+       y="2.7270507e-06"
+       rx="13.229166"
+       ry="13.229166" />
     <text
        xml:space="preserve"
        style="font-size:98.3227px;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.371615"
