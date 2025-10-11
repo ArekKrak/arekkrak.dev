@@ -7,46 +7,11 @@
    viewBox="0 0 135.46666 135.46667"
    version="1.1"
    id="svg1"
-   sodipodi:docname="favicon.svg"
-   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
-   inkscape:export-filename="favicon.svg"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:document-units="px"
-     inkscape:zoom="1.0116647"
-     inkscape:cx="220.92301"
-     inkscape:cy="224.87689"
-     inkscape:window-width="1920"
-     inkscape:window-height="1011"
-     inkscape:window-x="0"
-     inkscape:window-y="32"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
   <defs
-     id="defs1">
-    <rect
-       x="23.723276"
-       y="56.342781"
-       width="465.56929"
-       height="417.13427"
-       id="rect2" />
-  </defs>
+     id="defs1" />
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1">
     <rect
        style="fill:#2278e9;fill-opacity:1;stroke:none;stroke-width:0.579007"
@@ -57,20 +22,14 @@
        y="2.7270507e-06" />
     <text
        xml:space="preserve"
-       transform="scale(0.26458333)"
-       id="text1"
-       style="font-size:330px;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans';text-align:center;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#2278e9;fill-opacity:1;stroke:none;stroke-width:1.39843" />
-    <text
-       xml:space="preserve"
-       style="font-size:108.128px;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.408674"
-       x="74.650719"
-       y="102.03378"
+       style="font-size:98.3227px;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans';text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.371615"
+       x="78.660896"
+       y="95.551689"
        id="text3"
-       transform="scale(0.90536934,1.1045216)"><tspan
-         sodipodi:role="line"
+       transform="scale(0.86054254,1.1620576)"><tspan
          id="tspan3"
-         style="font-size:108.128px;fill:#000000;stroke-width:0.408673"
-         x="74.650726"
-         y="102.03378">AK</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:normal;font-size:98.3227px;font-family:'Josefin Sans';-inkscape-font-specification:'Josefin Sans Semi-Bold';fill:#000000;stroke-width:0.371615"
+         x="78.660896"
+         y="95.551689">AK</tspan></text>
   </g>
 </svg>
