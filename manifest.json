@@ -27,5 +27,19 @@
             "sizes": "1024x1024",
             "type": "image/png"
         }
+    ],
+    "screenshots": [
+        {
+            "src": "img/portfolio-website.png",
+            "sizes": "1920x1080",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "img/portfolio-website-mobile.png",
+            "sizes": "1080x1920",
+            "type": "image/png",
+            "form_factor": "narrow"
+        }
     ]
 }
