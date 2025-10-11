@@ -69,6 +69,7 @@ arek-portfolio-website/
 ├── cypher-demo.html            # Demo page
 ├── mixed-messages-demo.html    # Demo page
 ├── styles-demo.css             # Demo styles
+├── manifest.json               # Manifest
 ├── img/                        # Images and SVGs
 │   ├── about-me.svg
 │   ├── about-profile-pic.jpg
