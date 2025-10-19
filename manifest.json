@@ -2,7 +2,7 @@
     "name": "Arek Krakowiak Portfolio",
     "short_name": "AK Portfolio",
     "description": "A personal web portfolio by Arek Krakowiak showcasing projects, skills, and achievements.",
-    "start_url": "/",
+    "start_url": ".",
     "display": "standalone",
     "background_color": "#000000",
     "theme_color": "#00aa00",

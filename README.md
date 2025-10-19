@@ -85,7 +85,7 @@ arek-portfolio-website/
 ---
 
 ## Live Site
-**[View the Live Project](https://arekkrak.dev/)**
+**[View the Live Project](https://arekkrak.github.io/arek-portfolio-website/)**
 
 ---
 
