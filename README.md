@@ -7,7 +7,7 @@
 ![jQuery](https://img.shields.io/badge/jQuery-JS_library-0769AD?logo=jquery&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-Backend-777BB4?logo=php&logoColor=white&style=flat)
 ![VS Code](https://img.shields.io/badge/VS_Code-Editor-007ACC?logo=visualstudiocode&logoColor=white&style=flat)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white&style=flat)](https://github.com/ArekKrak/arek-portfolio-website)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white&style=flat)](https://arekkrak.dev/)
 
 This portfolio and showcase website was developed as part of my full-stack development journey and serves as a central hub for presenting projects, technical skills, and interactive web development work.  
 
