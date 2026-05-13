@@ -1,127 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Arek Krakowiak Portfolio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="img/favicon.svg" rel="icon" type="image/svg+xml">
-        <link href="img/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
-        <link href="img/favicon-apple-touch.png" rel="apple-touch-icon" sizes="180x180">
-        <link href="img/favicon.ico" rel="icon" sizes="any">
-        <link href="manifest.json" rel="manifest">
-        <link href="styles.css?v=25" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libertinus+Mono&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&family=Overpass:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="nav">
-                    <a class="active" aria-label="Home Page">
-                        <svg width="70" height="70" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                            <g stroke-width="0"/>
-                            <g stroke-linecap="round" stroke-linejoin="round"/>
-                            <path fill="currentcolor" d="M512 128 128 447.936V896h255.936V640H640v256h255.936V447.936z"/>
-                        </svg>
-                    </a>
-                    <a class="inactive" aria-label="About Me" href="about.html" title="About Me">
-                        <svg width="70" height="70" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                            <g stroke-width="0"/>
-                            <g stroke-linecap="round" stroke-linejoin="round"/>
-                            <path fill="currentcolor" d="M628.736 528.896A416 416 0 0 1 928 928H96a415.872 415.872 0 0 1 299.264-399.104L512 704l116.736-175.104zM720 304a208 208 0 1 1-416 0 208 208 0 0 1 416 0z"/>
-                        </svg>
-                    </a>
-                    <a class="inactive" aria-label="Projects" href="projects.html" title="Projects">
-                        <svg width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g stroke-width="0"/>
-                            <g stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M7.90451 6.92144C8.41341 6.45495 8.44779 5.66424 7.9813 5.15534C7.51481 4.64645 6.7241 4.61207 6.2152 5.07856L7.90451 6.92144ZM1.46194 11.1314L2.3066 12.0529L2.3066 12.0529L1.46194 11.1314ZM1.46194 11.8686L2.3066 10.9471L2.3066 10.9471L1.46194 11.8686ZM6.2152 17.9214C6.7241 18.3879 7.51481 18.3536 7.9813 17.8447C8.44779 17.3358 8.41341 16.545 7.90451 16.0786L6.2152 17.9214ZM6.2152 5.07856L0.617287 10.21L2.3066 12.0529L7.90451 6.92144L6.2152 5.07856ZM0.617287 12.79L6.2152 17.9214L7.90451 16.0786L2.3066 10.9471L0.617287 12.79ZM0.617287 10.21C-0.139356 10.9036 -0.139356 12.0964 0.617287 12.79L2.3066 10.9471C2.63087 11.2444 2.63087 11.7556 2.3066 12.0529L0.617287 10.21Z" fill="currentcolor"/> 
-                            <path d="M16.0557 16.0786C15.5468 16.545 15.5125 17.3358 15.9789 17.8447C16.4454 18.3536 17.2361 18.3879 17.745 17.9214L16.0557 16.0786ZM22.4983 11.8686L21.6537 10.9471L21.6537 10.9471L22.4983 11.8686ZM22.4983 11.1314L21.6537 12.0529L21.6537 12.0529L22.4983 11.1314ZM17.745 5.07856C17.2361 4.61207 16.4454 4.64645 15.979 5.15534C15.5125 5.66424 15.5468 6.45495 16.0557 6.92144L17.745 5.07856ZM17.745 17.9214L23.343 12.79L21.6537 10.9471L16.0557 16.0786L17.745 17.9214ZM23.343 10.21L17.745 5.07856L16.0557 6.92144L21.6537 12.0529L23.343 10.21ZM23.343 12.79C24.0996 12.0964 24.0996 10.9036 23.343 10.21L21.6537 12.0529C21.3294 11.7556 21.3294 11.2444 21.6537 10.9471L23.343 12.79Z" fill="currentcolor"/> 
-                            <path d="M15.2127 3.80317C15.3801 3.13343 14.9729 2.45476 14.3032 2.28732C13.6334 2.11989 12.9548 2.52709 12.7873 3.19683L15.2127 3.80317ZM8.78732 19.1968C8.61989 19.8666 9.02709 20.5452 9.69683 20.7127C10.3666 20.8801 11.0452 20.4729 11.2127 19.8032L8.78732 19.1968ZM12.7873 3.19683L8.78732 19.1968L11.2127 19.8032L15.2127 3.80317L12.7873 3.19683Z" fill="currentcolor"/>
-                        </svg>
-                    </a>
-                    <a class="inactive" aria-label="Contact" href="contact.html" title="Contact">
-                        <svg width="70" height="70" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                            <g stroke-width="0"/>
-                            <g stroke-linecap="round" stroke-linejoin="round"/>
-                            <path fill="currentcolor" d="m64 448 832-320-128 704-446.08-243.328L832 192 242.816 545.472 64 448zm256 512V657.024L512 768 320 960z"/>
-                        </svg>
-                    </a>
-                </div>
-            </nav>
-            <div class="info">
-                <div class="main-info">
-                    <div class="toggle">
-                        <button id="theme-toggle" aria-pressed="false" aria-label="Toggle dark/light mode" title="Enable dark/light mode">
-                            <svg width="20px" height="20px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                                <g stroke-width="0"/>
-                                <g stroke-linecap="round" stroke-linejoin="round"/>
-                                <g id="Layer_2" data-name="Layer 2"> <g id="Icons"> <g> <rect width="48" height="48" fill="none"/> <g> <path d="M14,24A10,10,0,0,0,24,34V14A10,10,0,0,0,14,24Z"/> <path d="M24,2A22,22,0,1,0,46,24,21.9,21.9,0,0,0,24,2ZM6,24A18.1,18.1,0,0,1,24,6v8a10,10,0,0,1,0,20v8A18.1,18.1,0,0,1,6,24Z"/> </g> </g> </g> </g>
-                            </svg>
-                        </button>
-                    </div>
-                    <h1 class="gradient">Arek Krakowiak</h1>
-                    <h2>Full&ndash;stack Developer</h2>
-                    <span class="greeting">
-                        I&apos;m currently seeking a full&ndash;time employment in the UK. If interested, please contact me via my contact page or LinkedIn. 
-                    </span>
-                    <div class="socials">
-                        <div class="linkedin">
-                            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/arekkrakowiak/" title="My LinkedIn profile" target="_blank">
-                                <svg fill="currentcolor" width="70" height="70" viewBox="-5.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <g stroke-width="0"/>
-                                    <g stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M0 8.219v15.563c0 1.469 1.156 2.625 2.625 2.625h15.563c0.719 0 1.406-0.344 1.844-0.781 0.469-0.469 0.781-1.063 0.781-1.844v-15.563c0-1.469-1.156-2.625-2.625-2.625h-15.563c-0.781 0-1.375 0.313-1.844 0.781-0.438 0.438-0.781 1.125-0.781 1.844zM2.813 10.281c0-1 0.813-1.875 1.813-1.875 1.031 0 1.875 0.875 1.875 1.875 0 1.031-0.844 1.844-1.875 1.844-1 0-1.813-0.813-1.813-1.844zM7.844 23.125v-9.531c0-0.219 0.219-0.406 0.375-0.406h2.656c0.375 0 0.375 0.438 0.375 0.719 0.75-0.75 1.719-0.938 2.719-0.938 2.438 0 4 1.156 4 3.719v6.438c0 0.219-0.188 0.406-0.375 0.406h-2.75c-0.219 0-0.375-0.219-0.375-0.406v-5.813c0-0.969-0.281-1.5-1.375-1.5-1.375 0-1.719 0.906-1.719 2.125v5.188c0 0.219-0.219 0.406-0.438 0.406h-2.719c-0.156 0-0.375-0.219-0.375-0.406zM2.875 23.125v-9.531c0-0.219 0.219-0.406 0.375-0.406h2.719c0.25 0 0.406 0.156 0.406 0.406v9.531c0 0.219-0.188 0.406-0.406 0.406h-2.719c-0.188 0-0.375-0.219-0.375-0.406z"/> 
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="github">
-                            <a aria-label="GitHub" href="https://github.com/ArekKrak" title="My GitHub profile" target="_blank">
-                                <svg fill="currentcolor" width="70" height="70" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                    <g stroke-width="0"/>
-                                    <g stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M16 1.375c-8.282 0-14.996 6.714-14.996 14.996 0 6.585 4.245 12.18 10.148 14.195l0.106 0.031c0.75 0.141 1.025-0.322 1.025-0.721 0-0.356-0.012-1.3-0.019-2.549-4.171 0.905-5.051-2.012-5.051-2.012-0.288-0.925-0.878-1.685-1.653-2.184l-0.016-0.009c-1.358-0.93 0.105-0.911 0.105-0.911 0.987 0.139 1.814 0.718 2.289 1.53l0.008 0.015c0.554 0.995 1.6 1.657 2.801 1.657 0.576 0 1.116-0.152 1.582-0.419l-0.016 0.008c0.072-0.791 0.421-1.489 0.949-2.005l0.001-0.001c-3.33-0.375-6.831-1.665-6.831-7.41-0-0.027-0.001-0.058-0.001-0.089 0-1.521 0.587-2.905 1.547-3.938l-0.003 0.004c-0.203-0.542-0.321-1.168-0.321-1.821 0-0.777 0.166-1.516 0.465-2.182l-0.014 0.034s1.256-0.402 4.124 1.537c1.124-0.321 2.415-0.506 3.749-0.506s2.625 0.185 3.849 0.53l-0.1-0.024c2.849-1.939 4.105-1.537 4.105-1.537 0.285 0.642 0.451 1.39 0.451 2.177 0 0.642-0.11 1.258-0.313 1.83l0.012-0.038c0.953 1.032 1.538 2.416 1.538 3.937 0 0.031-0 0.061-0.001 0.091l0-0.005c0 5.761-3.505 7.029-6.842 7.398 0.632 0.647 1.022 1.532 1.022 2.509 0 0.093-0.004 0.186-0.011 0.278l0.001-0.012c0 2.007-0.019 3.619-0.019 4.106 0 0.394 0.262 0.862 1.031 0.712 6.028-2.029 10.292-7.629 10.292-14.226 0-8.272-6.706-14.977-14.977-14.977-0.006 0-0.013 0-0.019 0h0.001z"/> 
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-image" id="portrait" aria-label="Toggle portrait" tabindex="0">
-                    <img class="front" alt="Medieval-style portrait of Arek Krakowiak" width="290" height="400" src="img/medieval-style.png" aria-hidden="true" loading="eager">
-                    <img class="back" alt="Arek Krakowiak image" width="290" height="400" src="img/profile-pic.jpg">
-                </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Arek Krakowiak" />
+    <meta name="description" content="Showcase Website" />
+    <title>Arek Krakowiak Portfolio</title>
+    <link href="assets/favicons/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="assets/favicons/favicon-32.png" rel="icon" type="image/png" sizes="32x32" />
+    <link href="assets/favicons/favicon-apple-touch.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="assets/favicons/favicon.ico" rel="icon" sizes="any" />
+    <link href="manifest.json" rel="manifest" />
+    <link href="vendors/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="vendors/fa/css/all.min.css" rel="stylesheet" />
+    <link href="vendors/devicon/devicon.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body id="page-top" class="loading">
+    <div id="preloader">
+      <div class="hourglass"></div>
+    </div>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none fw-bold" id="navName">Arek Krakowiak</span>
+        <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/about-profile-pic-blue.webp" alt="Arek Krakowiak photo" /></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Page Content-->
+    <div id="page-content">
+      <div class="container-fluid p-0" id="about-fluid">
+        <section id="intro-animation">
+          <h2 class="animated-title" data-text="FULL-STACK DEVELOPER">
+            FULL-STACK DEVELOPER
+          </h2>
+        </section>
+        <!-- About-->
+        <section class="resume-section my-4 p-2 p-md-2 rounded-end-4 shadow" id="about">
+          <div class="resume-section-content text-center text-lg-start px-3 px-md-5 py-4 py-md-5">
+            <h1 class="mb-3 display-4 display-md-4 display-lg-2 fw-bold">
+              <span id="name">Arek Krakowiak</span>
+            </h1>
+            <p class="lead mb-4 w-100 fs-4">I am a full&ndash;stack developer pursuing a career in web and application development, with a strong interest in learning new technologies and building practical projects. I am currently seeking an entry&ndash;level IT opportunity where I can apply my skills, contribute to a team, and continue growing as a developer.</p>
+            <div class="social-icons">
+              <a class="social-icon" href="#" title="Visit my LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
+              <a class="social-icon" href="https://github.com/ArekKrak" target="_blank" title="Visit my GitHub"><i class="fab fa-github"></i></a>
             </div>
-        </header>
-        <main>
-            <div class="equalizer">
-                <div class="projects">
-                    <a id="projects-header" aria-label="Projects" href="projects.html">
-                        <h2>Projects:</h2>
-                    </a>
-                    <a id="portfolio-website" aria-label="Arek Krakowiak Portfolio Website" href="https://arekkrak.dev/" title="Current website">
-                        <p>HTML, CSS &amp; JavaScript challenge project &mdash; Portfolio Website&nbsp;<span>(Current website)</span></p>
-                    </a>
-                    <a id="go-ride" aria-label="Go Ride! static website" href="https://arekkrak.github.io/go-ride/" title="View live website" target="_blank">
-                        <p>HTML &amp; CSS challenge project &mdash; &quot;Go Ride!&quot; website</p>
-                    </a>
-                    <a id="cypher-python" aria-label="Credit Card Checker JavaScript project" href="https://github.com/ArekKrak/mixed-messages" title="Visit my GitHub repo" target="_blank">
-                        <p>JavaScript challenge project &mdash; &quot;Mixed Messages&quot; program</p>
-                    </a>
-                    <a id="mixed-messages" aria-label="Cypher Python project" href="https://github.com/ArekKrak/cypher" title="Visit my GitHub repo" target="_blank">
-                        <p>Python challenge project &mdash; Cypher</p>
-                    </a>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="resume-section my-4 p-2 p-md-2 rounded-end-4 shadow" id="projects">
+          <div class="row g-4 resume-section-content text-center text-lg-start px-3 px-md-5 py-4 py-md-5">
+            <h2 class="mb-3 display-6 display-md-4 display-lg-2 fw-bold">Projects</h2>
+            <hr class="text-dark">
+            <div class="col-12 col-lg-6 d-flex flex-column flex-md-row justify-content-between mb-3">
+              <div class="flex-grow-1">
+                <h3 class="mb-4">Gazetteer</h3>
+                <figure class="w-50 mx-auto">
+                  <img class="img-fluid rounded-2 mb-3" src="assets/img/gazetteer-modal-carousel/starting-map.webp" alt="Gazetteer mobile view screenshot" title="Gazetteer" />
+                </figure>
+                <figcaption class="text-start fs-4">Gazetteer is a mobile&ndash;first web application that provides country profiling through the presentation of demographic, geographical, and other interactive data.</figcaption>
+                <div id="buttons" class="row">
+                  <a href="https://arekkrakowiak.com/project1/" target="_blank" class="col-3 d-flex align-items-center project-button" title="Live project">
+                    <svg fill="currentColor" class="my-0 mx-auto" width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                      <g id="SVGRepo_iconCarrier"> 
+                        <path d="M13,1 C14.1046,1 15,1.89543 15,3 L15,13 C15,14.1046 14.1046,15 13,15 L3,15 C1.89543,15 1,14.1046 1,13 L1,3 C1,1.89543 1.89543,1 3,1 L13,1 Z M13,3 L3,3 L3,13 L13,13 L13,3 Z M6,5.98754 C6,5.18568 6.89643,4.70994 7.56049,5.15938 L10.534,7.17184 C11.12,7.56845 11.12,8.43155 10.534,8.82816 L7.56049,10.8406 C6.89642,11.2901 6,10.8143 6,10.0125 L6,5.98754 Z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/ArekKrak/arekKrakowiak/tree/main/project1" target="_blank" class="col-3 d-flex align-items-center project-button" title="My GitHub project">
+                    <svg fill="currentColor" class="my-0 mx-auto" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                      <g id="SVGRepo_iconCarrier">
+                        <title>github</title>
+                        <path d="M16 1.375c-8.282 0-14.996 6.714-14.996 14.996 0 6.585 4.245 12.18 10.148 14.195l0.106 0.031c0.75 0.141 1.025-0.322 1.025-0.721 0-0.356-0.012-1.3-0.019-2.549-4.171 0.905-5.051-2.012-5.051-2.012-0.288-0.925-0.878-1.685-1.653-2.184l-0.016-0.009c-1.358-0.93 0.105-0.911 0.105-0.911 0.987 0.139 1.814 0.718 2.289 1.53l0.008 0.015c0.554 0.995 1.6 1.657 2.801 1.657 0.576 0 1.116-0.152 1.582-0.419l-0.016 0.008c0.072-0.791 0.421-1.489 0.949-2.005l0.001-0.001c-3.33-0.375-6.831-1.665-6.831-7.41-0-0.027-0.001-0.058-0.001-0.089 0-1.521 0.587-2.905 1.547-3.938l-0.003 0.004c-0.203-0.542-0.321-1.168-0.321-1.821 0-0.777 0.166-1.516 0.465-2.182l-0.014 0.034s1.256-0.402 4.124 1.537c1.124-0.321 2.415-0.506 3.749-0.506s2.625 0.185 3.849 0.53l-0.1-0.024c2.849-1.939 4.105-1.537 4.105-1.537 0.285 0.642 0.451 1.39 0.451 2.177 0 0.642-0.11 1.258-0.313 1.83l0.012-0.038c0.953 1.032 1.538 2.416 1.538 3.937 0 0.031-0 0.061-0.001 0.091l0-0.005c0 5.761-3.505 7.029-6.842 7.398 0.632 0.647 1.022 1.532 1.022 2.509 0 0.093-0.004 0.186-0.011 0.278l0.001-0.012c0 2.007-0.019 3.619-0.019 4.106 0 0.394 0.262 0.862 1.031 0.712 6.028-2.029 10.292-7.629 10.292-14.226 0-8.272-6.706-14.977-14.977-14.977-0.006 0-0.013 0-0.019 0h0.001z"/>
+                      </g>
+                    </svg>
+                  </a>
+                  <a class="col-3 d-flex align-items-center project-button" data-bs-toggle="modal" data-bs-target="#gazetteerModal" id="infoButton" title="Learn more about this project">
+                    <svg fill="currentColor" class="my-0 mx-auto" width="30px" height="30px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/></svg>
+                  </a>
                 </div>
+                <!-- BADGES -->
+                <div class="project-badges my-3">
+                  <a href="https://html.spec.whatwg.org/" target="_blank">                    
+                    <img src="https://img.shields.io/badge/HTML5-Markup-E34F26?logo=html5&logoColor=white&style=flat" alt="HTML Badge">
+                  </a>
+                  <a href="https://www.w3.org/Style/CSS/Overview.en.html" target="_blank">                    
+                    <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white&style=flat" alt="CSS Badge">
+                  </a>
+                  <a href="https://getbootstrap.com/" target="_blank">
+                    <img src="https://img.shields.io/badge/Bootstrap-Styling-7952B3?logo=bootstrap&logoColor=white&style=flat" alt="Bootstrap Badge">
+                  </a>
+                  <a href="https://www.php.net/" target="_blank">
+                    <img src="https://img.shields.io/badge/PHP-Backend-777BB4?logo=php&logoColor=white&style=flat" alt="PHP Badge">
+                  </a>
+                  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">                    
+                    <img src="https://img.shields.io/badge/JavaScript-Language-F7DF1E?logo=javascript&logoColor=black&style=flat" alt="JavaScript Badge">
+                  </a>
+                  <a href="https://jquery.com/" target="_blank">
+                    <img src="https://img.shields.io/badge/jQuery-JS_library-0769AD?logo=jquery&logoColor=white" alt="jQuery Badge">
+                  </a>
+                  <a href="https://leafletjs.com/" target="_blank">
+                    <img src="https://img.shields.io/badge/Leaflet-Maps-199900?logo=leaflet&logoColor=white" alt="Leaflet Badge">
+                  </a>
+                  <a href="https://code.visualstudio.com/" target="_blank">                    
+                    <img src="https://img.shields.io/badge/VSCode-Editor-007ACC?logo=visualstudiocode&logoColor=white&style=flat" alt="VSCode Badge">
+                  </a>
+                  <a href="https://github.com//" target="_blank">                    
+                    <img src="https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white&style=plastic" alt="GitHub Badge">
+                  </a>
+                </div>
+              </div>
             </div>
-        </main>
-        <footer>
-            <div class="equalizer">
-                <div class="footer-item">
-                    <p class="copyright">Arek Krakowiak &copy;2025</p>
-                </div>
-                <div class="footer-item">
-                    <p class="copyright">Crafted with HTML5, CSS3 & JavaScript (and plenty of coffee &#9749;)</p>
-                </div>
+            <div class="col-12 col-lg-6 d-flex flex-column flex-md-row justify-content-between">
+              <div class="flex-grow-1">
+                <h3 class="mb-0">Project 2</h3>
+                <div>Screenshot</div>
+                <p class="fs-4">Description</p>
+              </div>
             </div>
-        </footer>
-        <script src="main.js" defer></script>
-    </body>
+          </div>
+        </section>
+
+        <!-- Skills-->
+        <section class="resume-section my-4 p-2 p-md-2 rounded-end-4 shadow" id="skills">
+          <div class="resume-section-content text-center text-lg-start px-3 px-md-5 py-4 py-md-5">
+            <h2 class="mb-3 display-6 display-md-4 display-lg-2 fw-bold">Skills</h2>
+            <div class="subheading mb-3">Programming Languages & Tools</div>
+            <div class="d-flex">
+              <ul class="list-inline dev-icons my-2 p-1 p-md-2 rounded-2 shadow" id="devicons">
+                <li class="list-inline-item fs-3"><i class="fab fa-html5" title="HTML 5"></i></li>
+                <li class="list-inline-item fs-3"><i class="fab fa-css3-alt" title="CSS 3"></i></li>
+                <li class="list-inline-item fs-3"><i class="fab fa-bootstrap" title="Bootstrap"></i></li>
+                <li class="list-inline-item fs-3"><i class="fab fa-js-square" title="JavaScript"></i></li>
+                <li class="list-inline-item fs-3"><i class="fab fa-react" title="React"></i></li>
+                <li class="list-inline-item fs-3"><i class="fab fa-node-js" title="Node.js"></i></li>
+                <li class="list-inline-item fs-3"><i class="devicon-jquery-plain" title="jQuery"></i></li>
+                <li class="list-inline-item fs-3"><i class="fas fa-location-dot" title="Leaflet"></i></li>
+                <li class="list-inline-item fs-3"><i class="fab fa-python" title="Python"></i></li>
+                <li class="list-inline-item fs-3"><i class="fab fa-php" title="PHP"></i></li>
+                <li class="list-inline-item fs-3"><i class="fab devicon-postgresql-plain" title="PostgreSQL"></i></li>
+                <li class="list-inline-item fs-3"><i class="fab fa-java" title="Java"></i></li>
+                <li class="list-inline-item fs-3"><i class="devicon-csharp-plain" title="C#"></i></li>
+                <li class="list-inline-item fs-3"><i class="fas fa-terminal" title="Bash"></i></li>
+                <li class="list-inline-item fs-3"><i class="fab fa-npm" title="Node Package Manager"></i></li>
+              </ul>
+            </div>
+            <div class="subheading mb-3">Workflow</div>
+            <ul class="fa-ul mb-0 text-start" id="workflow">
+              <li class="fs-4">
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Mobile-First, Responsive Design
+              </li>
+              <li class="fs-4">
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Testing & Debugging
+              </li>
+              <li class="fs-4">
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Front-End and Back-End
+              </li>
+              <li class="fs-4">
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                Full-Stack Development
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Experience-->
+        <section class="d-flex flex-column resume-section my-4 p-2 p-md-2 rounded-end-4 shadow" id="experience">
+          <div class="resume-section-content text-center text-lg-start px-3 px-md-5 py-4 py-md-5">
+            <h2 class="mb-3 display-6 display-md-4 display-lg-2 fw-bold">Experience</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+              <div class="flex-grow-1">
+                <h3 class="mb-0">Full-Stack Development Trainee</h3>
+                <hr />
+                <div class="subheading mb-3">IT Career Switch</div>
+                <p class="fs-4">I undertook structured training with IT Career Switch to develop the skills required for a career as a Full&ndash;Stack Developer. Throughout the programme, I gained hands&ndash;on experience with front&ndash;end and back&ndash;end technologies, building practical projects involving APIs, databases, and responsive user interfaces. The training emphasised real&ndash;world problem&ndash;solving, debugging, and best practices, helping me build a solid technical foundation and prepare for an entry&ndash;level development role.</p>
+              </div>
+              <div class="flex-shrink-0"><span class="period">May 2025 - Present</span></div>
+            </div>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+              <div class="flex-grow-1">
+                <h3 class="mb-0">Cyber Security Intern</h3>
+                <hr />
+                <div class="subheading mb-3">NuYew Tech Academy</div>
+                <p class="fs-4">I was trained in core IT concepts through advanced modules, working towards and achieving CompTIA certifications including ITF+ and A+. This allowed me to develop a solid understanding of fundamental IT principles and industry standards.</p>
+              </div>
+              <div class="flex-shrink-0"><span class="period">2023 - 2025</span></div>
+            </div>
+          </div>
+          <div class="mb-4">
+            <a class="cont_centrar cv-download-button" href="assets/docs/Arkadiusz_Krakowiak_CV.pdf" download onclick="btn_active()" aria-label="Download Curriculum Vitae PDF">
+              <span class="texto_centro">Download my CV</span>
+              <svg 
+                version="1.1"
+                id="svg4174"
+                viewBox="0 0 300 100"
+                height="100"
+                width="300">  
+                <g
+                  transform="translate(0,-952.36216)"
+                  id="layer1">
+                  <rect
+                    y="955.21716"
+                    x="2.8549886"
+                    height="94.290024"
+                    width="294.29001"
+                    id="rect4147"
+                    style="opacity:1;fill:none;fill-opacity:1;stroke:#423e30;stroke-width:5.70997715;stroke-miterlimit:4; stroke-opacity:1" />
+                </g>
+              </svg>
+              <svg
+                
+                xmlns:svg="http://www.w3.org/2000/svg"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                id="svg2"
+                viewBox="0 0 20 20.000001"
+                height="32"
+                width="32">
+                <defs
+                  id="defs4" />
+                <g
+                  transform="translate(0,-1032.3622)"
+                  id="layer2">
+                  <path
+                    id="path4138"
+                    d="m 0.89488966,1042.5048 5.36642974,5.4927 12.8794496,-11.9324"
+                    style="fill:none;fill-rule:evenodd;stroke:#423e30;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1" />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- Interests-->
+        <section class="resume-section my-4 p-2 p-md-2 py-md-5 rounded-end-4 shadow" id="interests">
+          <div class="resume-section-content text-center text-lg-start px-3 px-md-5 py-4 py-md-5">
+            <h2 class="mb-3 display-6 display-md-4 display-lg-2 fw-bold">Interests</h2>
+            <p class="fs-4">Outside of coding, I enjoy cycling, swimming, and working on DIY projects, including computers and small technical builds. I also have an interest in esoteric topics, as well as a passion for travel and exploring ancient monuments. These interests keep me inspired and bring a creative perspective to my technical work.</p>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="resume-section mt-4 p-2 p-md-2 rounded-end-4 shadow" id="contact">
+          <div class="resume-section-content text-center text-lg-start px-3 px-md-5 py-4 py-md-5">
+            <h2 class="mb-3 display-6 display-md-4 display-lg-2 fw-bold">Contact</h2>
+            <div id="formAlert"></div>
+            <form id="contactForm" method="POST" action="./php/contact.php">
+              <div class="mb-3">
+                <label for="yourName" class="form-label fs-4">Your name</label>
+                <input type="text" class="form-control" name="name" id="yourName" placeholder="Your name" maxlength="100" />
+              </div>
+              <div class="mb-3">
+                <label for="yourEmail" class="form-label fs-4">Your email</label>
+                <input type="email" class="form-control" name="email" id="yourEmail" placeholder="your.email@example.com" maxlength="254" />
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label fs-4">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" maxlength="150" />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label fs-4">Your message</label>
+                <textarea class="form-control" name="message" id="message" placeholder="Type your message here..." maxlength="4000"></textarea>
+              </div>
+              <!-- hp -->
+              <input type="text" name="website" id="hpwebsite" autocomplete="off" aria-hidden="true" value="" tabindex="-1" />
+              <div class="mb-3">
+                <button type="submit" class="button">
+                  <span class="default">Submit</span>
+                  <span class="success fs-4">
+                    <svg viewBox="0 0 16 16">
+                      <polyline points="3.75 9 7 12 13 5"></polyline>
+                    </svg>Message Sent
+                  </span>
+                  <svg class="trails" viewBox="0 0 33 64">
+                    <path d="M26,4 C28,13.3333333 29,22.6666667 29,32 C29,41.3333333 28,50.6666667 26,60"></path>
+                    <path d="M6,4 C8,13.3333333 9,22.6666667 9,32 C9,41.3333333 8,50.6666667 6,60"></path>
+                  </svg>
+                  <div class="plane">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                  </div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- MODALS SECTION -->
+    <div class="modal fade" id="gazetteerModal" tabindex="-1" aria-labelledby="gazetteerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title fw-bold" id="gazetteerModalLabel">Gazetteer</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="gazetteerCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="assets/img/gazetteer-modal-carousel/1data-layers.webp" class="d-block w-100 rounded-3" alt="data layers">
+                  <div class="carousel-description text-center mt-3">
+                    <h5>Toggle markers on and off</h5>
+                    <p>Mobile view: all markers enabled (left), cities hidden (centre), and cities plus parks hidden (right)</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="assets/img/gazetteer-modal-carousel/2tooltips.webp" class="d-block w-100 rounded-3" alt="tooltips">
+                  <div class="carousel-description text-center mt-3">
+                    <h5>Tooltips</h5>
+                    <p>Mobile view: tooltips displaying information for capitals (left), cities (centre), and airports (right)</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="assets/img/gazetteer-modal-carousel/3top-modals.webp" class="d-block w-100 rounded-3" alt="top modals">
+                  <div class="carousel-description text-center mt-3">
+                    <h5>Top modals</h5>
+                    <p>Mobile view: country info modal (left), Wikipedia modal (centre), and weather modal (right)</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="assets/img/gazetteer-modal-carousel/4bottom-modals.webp" class="d-block w-100 rounded-3" alt="bottom modals">
+                  <div class="carousel-description text-center mt-3">
+                    <h5>Bottom modals</h5>
+                    <p>Mobile view: currency conversion modal (left and centre) and news modal (right)</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="assets/img/gazetteer-modal-carousel/5bottom-modal-st-and-sat-view.webp" class="d-block w-100 rounded-3" alt="parks modal st and satellite view">
+                  <div class="carousel-description text-center mt-3">
+                    <h5>Parks modal and map views</h5>
+                    <p>Mobile view: parks modal with interactive markers and Wikipedia links (left), street view (centre), and satellite view (right)</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="assets/img/gazetteer-modal-carousel/6airport-markers.webp" class="d-block w-100 rounded-3" alt="airport markers polygon">
+                  <div class="carousel-description text-center mt-3">
+                    <h5>Airport cluster polygons</h5>
+                    <p>Desktop view: dynamically clustered airport markers</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="assets/img/gazetteer-modal-carousel/7cities-markers.webp" class="d-block w-100 rounded-3" alt="city markers polygon">
+                  <div class="carousel-description text-center mt-3">
+                    <h5>City cluster polygons</h5>
+                    <p>Desktop view: dynamically clustered city markers</p>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="10000">
+                  <img src="assets/img/gazetteer-modal-carousel/8parks-markers.webp" class="d-block w-100 rounded-3" alt="parks markers polygon">
+                  <div class="carousel-description text-center mt-3">
+                    <h5>Parks cluster polygons</h5>
+                    <p>Desktop view: dynamically clustered park markers</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#gazetteerCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#gazetteerCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <p class="fs-6 fs-md-4 my-3 mx-2 mx-md-4 text-start">
+              This single&ndash;page website was one of my final assignments during a full&ndash;stack development traineeship. It was built with HTML, CSS, Bootstrap, JavaScript, jQuery, PHP, and libraries such as Leaflet, Datejs, and Numeral.js. The application features responsive layouts and interactive functionality, including country profiling modals, map controls, marker layers, and dynamic country selection. The project was developed locally using Git for version control and deployed via Hostinger, a web hosting provider.
+            </p>
+            <h4 class="mx-2 mx-md-4 fs-5 fs-md-4">Key features</h4>
+            <ul class="mx-2 mx-md-4 text-start">
+              <li>Responsive single-page layout</li>
+              <li>Modals providing profiling for each country</li>
+              <li>Geolocation</li>
+              <li>Dropdown menu listing all countries</li>
+              <li>Marker layers control</li>
+            </ul>
+            <h4 class="mx-2 mx-md-4 fs-5 fs-md-4">Tech Stack</h4>
+            <p class="mx-2 mx-md-4">HTML5, CSS3, Bootstrap, PHP, JavaScript, jQuery, Leaflet, Datejs, Numeral.js, VSCode, GitHub</p>
+          </div>
+          <div class="modal-footer">
+            <a href="https://arekkrak.github.io/arek-portfolio-website/" target="_blank" rel="noopener noreferrer" class="btn btn-dark">Live Project</a>
+            <a href="https://github.com/ArekKrak/arek-portfolio-website" target="_blank" rel="noopener noreferrer" class="btn btn-dark">GitHub Repository</a>
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="vendors/js/jquery-3.5.1.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="vendors/gsap/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

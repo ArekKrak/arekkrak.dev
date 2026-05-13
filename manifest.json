@@ -5,39 +5,39 @@
     "start_url": "/",
     "display": "standalone",
     "background_color": "#000000",
-    "theme_color": "#00aa00",
+    "theme_color": "#1A6EFF",
     "icons": [
         {
-            "src": "img/favicon-32.png",
+            "src": "assets/favicons/favicon-32.png",
             "sizes": "32x32",
             "type": "image/png"
         },
         {
-            "src": "img/favicon-256.png",
+            "src": "assets/favicons/favicon-256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "img/favicon-512.png",
+            "src": "assets/favicons/favicon-512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "img/favicon-1024.png",
+            "src": "assets/favicons/favicon-1024.png",
             "sizes": "1024x1024",
             "type": "image/png"
         }
     ],
     "screenshots": [
         {
-            "src": "img/portfolio-website.png",
-            "sizes": "1920x1080",
+            "src": "assets/img/portfolio-website.png",
+            "sizes": "2224x1080",
             "type": "image/png",
             "form_factor": "wide"
         },
         {
-            "src": "img/portfolio-website-mobile.png",
-            "sizes": "1080x1920",
+            "src": "assets/img/portfolio-website-mobile.png",
+            "sizes": "946x1920",
             "type": "image/png",
             "form_factor": "narrow"
         }
