@@ -286,7 +286,7 @@ section.resume-section {
   }
 }
 
-/* VSCode badge blue color, Bootstrap bg-primary gets overriden by the styles.css */
+/* VSCode badge blue color, Bootstrap bg-primary gets overriden by the styles.css, the other stylesheet */
 #vscodeBadge {
   color: #fff;
   background-color: #1068ff;
@@ -367,11 +367,14 @@ section #devicons {
 	background-size: 100% 100%;
 	/* animation: page-gradient 15s ease infinite; */       /* This rule causes weird glitches popping up here and there across the website */
   padding-top: 4rem;
-  padding-bottom: 3rem;
+}
+
+#page-footer {
+  padding-top: 4rem;
 }
 
 @media (min-width: 768px) {
-  #page-content {
+  #page-footer {
     /* padding-top: 4rem; */
     padding-bottom: 5rem;
   }
@@ -411,6 +414,18 @@ figcaption,
 #projectOneModal p,
 #projectOneModal li {
   color: #423e30;
+}
+
+#page-footer p {
+  color: #0d306d;
+}
+
+#page-footer a {
+  color: #c2bf03;
+}
+
+#page-footer a:hover {
+  color: #fffb00;
 }
 
 section #devicons li {
