@@ -369,14 +369,33 @@ section #devicons {
   padding-top: 4rem;
 }
 
+#page-footer p {
+  color: #0d306d;
+}
+
+#page-footer a {
+  color: #fffb00;
+}
+
 #page-footer {
   padding-top: 4rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 @media (min-width: 768px) {
   #page-footer {
     /* padding-top: 4rem; */
     padding-bottom: 2rem;
+  }
+
+  #page-footer a {
+    color: #c2bf03;
+  }
+
+  #page-footer a:hover {
+    color: #fffb00;
   }
 }
 
@@ -414,18 +433,6 @@ figcaption,
 #projectOneModal p,
 #projectOneModal li {
   color: #423e30;
-}
-
-#page-footer p {
-  color: #0d306d;
-}
-
-#page-footer a {
-  color: #c2bf03;
-}
-
-#page-footer a:hover {
-  color: #fffb00;
 }
 
 section #devicons li {
