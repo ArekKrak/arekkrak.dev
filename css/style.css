@@ -550,6 +550,12 @@ section figure img:hover {
   text-decoration: none;
 }
 
+/* EXPERIENCE */
+
+.subheading {
+  text-transform: none;
+}
+
 /* DOWNLOAD BUTTON */
 .cont_centrar {
   position: relative;
