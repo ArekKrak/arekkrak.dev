@@ -23,11 +23,6 @@ window.addEventListener('load', () => {
   document.body.classList.remove('loading');
   document.body.classList.add('loaded');
 
-  new bootstrap.ScrollSpy(document.body, {
-    target: '#sideNav',
-    rootMargin: '-40px 0px -43%'
-  });
-
   const preloader = document.querySelector('#preloader');
 
   if (preloader) {
@@ -215,3 +210,56 @@ function btn_active(){
     }, 11500);
   },9000);
 }
+
+// NAV CLICK
+const navLinks = document.querySelectorAll('#sideNav .nav-link');
+const sections = document.querySelectorAll('section.resume-section');
+
+function getScrollOffset() {
+  const profileImg = document.querySelector('#sideNav .img-profile');
+
+  if (window.innerWidth >= 992 && profileImg) {
+    return profileImg.getBoundingClientRect().top;
+  }
+
+  return document.querySelector('#sideNav').offsetHeight + 16;
+}
+
+function setActiveLink(id) {
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+  });
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+
+    if (!target) return;
+
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - getScrollOffset();
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+
+    setActiveLink(target.id);
+    this.blur();
+  });
+});
+
+window.addEventListener('scroll', () => {
+  let current = sections[0].id;
+  const marker = getScrollOffset() + 20;
+
+  sections.forEach(section => {
+    if (section.getBoundingClientRect().top <= marker) {
+      current = section.id
+    }
+  });
+
+  setActiveLink(current);
+});
