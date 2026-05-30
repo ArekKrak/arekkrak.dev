@@ -248,6 +248,7 @@ navLinks.forEach(link => {
 
     setActiveLink(target.id);
     this.blur();
+    document.activeElement.blur();
   });
 });
 

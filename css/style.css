@@ -260,6 +260,16 @@ span#navName {
   mask-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='black' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+#sideNav .nav-link:focus,
+#sideNav .nav-link:focus-visible {
+  color: inherit;
+  outline: none;
+}
+
+#sideNav .nav-link.active {
+  color: #1A6EFF;
+}
+
 @media (max-width: 991px) {
   #sideNav {
     z-index: 1050;
@@ -268,6 +278,18 @@ span#navName {
   #sideNav .navbar-toggler {
     display: block;
     margin-left: auto;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #sideNav .nav-link:hover,
+  #sideNav .nav-link:focus,
+  #sideNav .nav-link:active {
+    color: rgba(26, 110, 255, 0.35) !important;
+  }
+  
+  #sideNav .nav-link.active {
+    color: #1A6EFF !important;
   }
 }
 
