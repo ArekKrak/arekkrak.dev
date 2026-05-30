@@ -271,11 +271,6 @@ span#navName {
   }
 }
 
-/* #sideNav .nav-link:focus,
-#sideNav .nav-link:active {
-  color: #1A6EFF;
-} */
-
 section.resume-section {
   scroll-margin-top: 0;
   align-items: flex-start;
