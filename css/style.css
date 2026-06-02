@@ -328,7 +328,9 @@ section #devicons {
 }
 
 #gazetteerCarousel .carousel-control-prev,
-#gazetteerCarousel .carousel-control-next {
+#gazetteerCarousel .carousel-control-next,
+#compDirCarousel .carousel-control-prev,
+#compDirCarousel .carousel-control-next {
   align-items: start;
   height: fit-content;
   top: 35%;
@@ -336,14 +338,17 @@ section #devicons {
 }
 
 #gazetteerCarousel .carousel-control-prev-icon,
-#gazetteerCarousel .carousel-control-next-icon {
+#gazetteerCarousel .carousel-control-next-icon,
+#compDirCarousel .carousel-control-prev-icon,
+#compDirCarousel .carousel-control-next-icon {
   filter: invert(1);
   background-color: #292727be;
   border-radius: 25%;
   padding: 1.5rem;
 }
 
-#gazetteerCarousel .carousel-description {
+#gazetteerCarousel .carousel-description,
+#compDirCarousel .carousel-description {
   min-height: 6rem;
   font-size: 1rem;
   color: #423e30;
@@ -375,9 +380,14 @@ section #devicons {
     padding: 0.4rem 0.6rem;
   }
   
-  #gazetteerCarousel .carousel-description {
+  #gazetteerCarousel .carousel-description,
+  #compDirCarousel .carousel-description {
     min-height: 7rem;
   }
+}
+
+.carousel-img {
+  border: 2px solid #555;
 }
 
 #page-content {
