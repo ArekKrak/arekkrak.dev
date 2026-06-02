@@ -356,26 +356,31 @@ section #devicons {
 }
 
 @media (max-width: 767px) {
-  #gazetteerModal .modal-dialog {
+  #gazetteerModal .modal-dialog,
+  #compDirModal .modal-dialog {
     max-height: 80vh;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
 
-  #gazetteerModal .modal-content {
+  #gazetteerModal .modal-content,
+  #compDirModal .modal-content {
     max-height: 80vh;
   }
 
-  #gazetteerModal .modal-body {
+  #gazetteerModal .modal-body,
+  #compDirModal .modal-body {
     font-size: 0.95rem;
   }
 
-  #gazetteerModal .modal-body p.fs-4 {
+  #gazetteerModal .modal-body p.fs-4,
+  #compDirModal .modal-body p.fs-4 {
     font-size: 1rem !important;
     line-height: 1.45;
   }
 
-  #gazetteerModal .modal-footer .btn {
+  #gazetteerModal .modal-footer .btn,
+  #compDirModal .modal-footer .btn {
     font-size: 0.85rem;
     padding: 0.4rem 0.6rem;
   }
